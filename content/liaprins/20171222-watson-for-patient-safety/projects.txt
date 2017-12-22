@@ -1,0 +1,25 @@
+Title: Watson for Patient Safety
+
+----
+
+Thumbnail: watson-for-patient-safety.png
+
+----
+
+Intro: WPS intro
+
+----
+
+Opportunities: WPS opps
+
+----
+
+Process: WPS process
+
+----
+
+Outcomes: WPS outcomes
+
+----
+
+Livelearn: WPS changes

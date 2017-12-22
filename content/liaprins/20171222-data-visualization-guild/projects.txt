@@ -1,0 +1,25 @@
+Title: Data Visualization Guild
+
+----
+
+Thumbnail: data-visualization-guild.png
+
+----
+
+Intro: DV intro
+
+----
+
+Opportunities: DV opps
+
+----
+
+Process: DV process
+
+----
+
+Outcomes: DV outcomes
+
+----
+
+Livelearn: DV changes

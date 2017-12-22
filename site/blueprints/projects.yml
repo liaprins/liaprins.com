@@ -1,0 +1,61 @@
+title: Projects
+
+//page settings
+deletable: true
+options: 
+	preview: true
+	status: true
+	template: false
+	url: true
+	delete: true
+
+//subpage settings
+pages: 
+  template:
+    - gallery
+    - vocabword
+
+//file settings
+files: true
+  fields:
+    caption:
+      label: Caption
+      type: textarea
+    alt:
+      label: Alternate text
+      type: text
+      placeholder: Brief description of the image (for accessibility via screenreaders or in case the image fails to load)
+
+//fields with their field types and options
+fields:
+  title:
+    label: Project name
+    type:  text
+    required: true
+    help: Title should be title case without a period at the end
+  thumbnail:
+    label: Thumbnail
+    type: image
+    required: true
+    help: (Insert details about minimum size for resolution)
+  intro:
+    label: Introduction
+    type: textarea
+    placeholder: Intro explaining my motivation for creating this project
+  opportunities:
+    label: Opportunities
+    type: textarea
+    placeholder: Areas to improve and iterate the design
+  process:
+    label: Process
+    type: textarea
+    placeholder: My step-by-step approach
+  outcomes:
+    label: Outcomes
+    type: textarea
+    placeholder: The final designs
+  livelearn:
+    label: Live + learn
+    type: textarea
+    placeholder: What I would have done differently knowing then what I know now
+
