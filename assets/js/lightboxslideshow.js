@@ -15,29 +15,6 @@ function removeHashReturnScroll() {
 
 
 
-/*
-// TRYING IT LOWER DOWN IN SCRIPT TO SEE IF IT PERFORMS MORE CONSISTENTLY
-// NAMED + USED FUNCTION ----------------------------------------------------------------------------
-// vertically centers lightbox img
-// used on resize + on click of an img to open lightbox
-function verticallyCenter() {
-    var singleLightbox = document.getElementById('singlelightbox');
-    if (singleLightbox) {
-        var lightboxImg = singleLightbox.firstElementChild;
-        var imgHeight = lightboxImg.offsetHeight;
-        singleLightbox.style.height = (window.innerHeight);
-        singleLightbox.style.width = window.innerWidth;
-        var lightboxHeight = singleLightbox.offsetHeight;
-        lightboxImg.style.marginTop = (lightboxHeight - imgHeight)/2 + 'px';
-    }
-}
-
-// EVENT LISTENER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// vertically centers lightbox img upon screen resize
-window.addEventListener('resize', verticallyCenter, false);
-*/
-
-
 
 // NAMED FUNCTION ----------------------------------------------------------------------------
 // lightbox screen shows img corresponding to clicked indicator of img
@@ -702,6 +679,225 @@ function clickGalleryArrow(e) {
 // EVENT LISTENER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // responds to click in regular view on a left or right arrow
 window.addEventListener('click', clickGalleryArrow, false);
+
+
+
+
+// SWIPE FOR BOTH REGULAR VIEW GALLERY && LIGHTBOX VIEW!!!
+window.onload = function() {
+
+    document.addEventListener('swiped-left', function(e) {
+        console.log(e.type);
+        console.log(e.target);
+
+        var swipedThing = e.target;
+
+        // REG VIEW LEFT SWIPE
+        if ((swipedThing.getAttribute('id') == ('galleryimage')) && (swipedThing.classList.contains('clickme'))) {
+            
+            var dotsContainer = swipedThing.parentNode.parentNode.parentNode.lastElementChild;
+            var gallery = swipedThing.parentNode.parentNode.parentNode;
+            var galleryName = gallery.getAttribute('id');
+            var currentSlide = document.getElementById(galleryName + '-current');
+
+            // get total number of slides in gallery; subtract 3 to prevent counting arrowContainer, dotsContainer, and placeholderBox
+            var slideCount = gallery.children.length - 3;
+
+            // if current slide is not the last slide
+            // (slideCount - 1) because the index starts at 0, not 1, so need to subtract 1 from count to match them up
+            if (currentSlide.getAttribute('data-slide-index') != (slideCount - 1)) {
+
+                // id'ing the next slide
+                var clickedSideSlide = currentSlide.nextElementSibling;
+                var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
+                // calls NAMED FUNCTION
+                advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
+
+            } else {    // implied that advance arrow was clicked when last slide was current
+
+                // id'ing the first slide
+                var clickedSideSlide = currentSlide.parentNode.firstElementChild;
+                var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
+                // calls NAMED FUNCTION
+                advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
+
+            } // closing inner if/else statement
+
+        } // close if FOR REG VIEW LEFT SWIPE
+
+
+        // LIGHTBOX LEFT SWIPE
+        if (swipedThing.classList.contains('lightboximage')) {
+
+            // declare vars for advanceOrRetreat function
+            // mine data-* attribute from last dot right before arrows to get current gallery's name
+            var galleryName = swipedThing.parentNode.parentNode.parentNode.parentNode.getAttribute('id');
+            var gallery = swipedThing.parentNode.parentNode.parentNode.parentNode;
+            var dotsContainer = gallery.lastElementChild;
+            var currentSlide = document.getElementById(galleryName + '-current');
+        
+            var currentCaptionDuringLightbox = currentSlide.firstElementChild.lastElementChild.previousElementSibling;
+        
+            // find the current slide's index
+            var currentIndex = currentSlide.getAttribute('data-slide-index');
+
+            // if the reg view current slide has a caption
+            if (currentCaptionDuringLightbox.hasAttribute('data-galleryfigcaption')) {
+                currentCaptionDuringLightbox.style.display = "none";
+            }
+
+            // all functionality for building lightbox upon lightbox arrow click
+            var dotsLightboxContainer = swipedThing.parentNode.lastElementChild.previousElementSibling;
+
+            // get total number of slides in gallery; subtract 3 to prevent counting arrowContainer, dotsContainer, and placeholderBox
+            var slideCount = gallery.children.length - 3;
+
+            var currentLightbox = document.getElementById('singlelightbox');
+
+            // if current img is not the last one in gallery
+            // (slideCount - 1) because the index starts at 0, not 1, so need to subtract 1 from count to match them up
+            if (currentSlide.getAttribute('data-slide-index') != (slideCount - 1)) {
+
+                // id'ing the next slide
+                var clickedSideSlide = currentSlide.nextElementSibling;
+                var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
+                // calls NAMED FUNCTION
+                advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
+                // define imgToShow for NAMED functions called within the following nested if-statements
+                var imgToShow = clickedSideSlide.firstElementChild.firstElementChild;
+                // remove current lightbox
+                currentLightbox.parentNode.removeChild(currentLightbox);
+                // call NAMED lightbox function
+                lightbox(imgToShow);  
+                // call NAMED function to populate lightbox dots (defined in lightbox.js)
+                populateLightboxDots(imgToShow); 
+
+            } else {    // implied that advance arrow was clicked when last slide was current
+
+                // id'ing the first slide
+                var clickedSideSlide = currentSlide.parentNode.firstElementChild;
+                var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
+                // calls NAMED FUNCTION
+                advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
+                var imgToShow = clickedSideSlide.firstElementChild.firstElementChild;
+                // remove current lightbox
+                currentLightbox.parentNode.removeChild(currentLightbox);
+                // call NAMED lightbox function
+                lightbox(imgToShow);  
+                // call NAMED function to populate lightbox dots (defined in lightbox.js)
+                populateLightboxDots(imgToShow); 
+
+            } // closing inner if/else statement
+
+        } // close if
+
+    }); // close swiped-left inner function
+
+
+
+    // respond to right-swipe
+    document.addEventListener('swiped-right', function(e) {
+        console.log(e.type);
+        console.log(e.target);
+
+        var swipedThing = e.target;
+
+        // REG VIEW RIGHT SWIPE
+        if ((e.target.getAttribute('id') == ('galleryimage')) && (e.target.classList.contains('clickme'))) {
+            
+            var dotsContainer = swipedThing.parentNode.parentNode.parentNode.lastElementChild;
+            var gallery = swipedThing.parentNode.parentNode.parentNode;
+            var galleryName = gallery.getAttribute('id');
+            var currentSlide = document.getElementById(galleryName + '-current');
+
+            // if current slide is not the first slide
+            if (currentSlide.getAttribute('data-slide-index') != 0) {
+
+                // id'ing previous slide
+                var clickedSideSlide = currentSlide.previousElementSibling;
+                var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
+                // calls NAMED FUNCTION
+                advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
+
+            } else {    // implied that retreat arrow was clicked when first slide was current
+
+                // id'ing the last slide
+                var clickedSideSlide = currentSlide.parentNode.lastElementChild.previousElementSibling.previousElementSibling.previousElementSibling;
+                var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
+                // calls NAMED FUNCTION
+                advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
+
+            } // closing inner if/else statement
+
+        } // close if FOR REG VIEW RIGHT SWIPE
+
+
+        // LIGHTBOX RIGHT SWIPE
+        if (swipedThing.classList.contains('lightboximage')) {
+
+            // declare vars for advanceOrRetreat function
+            // mine data-* attribute from last dot right before arrows to get current gallery's name
+            var galleryName = swipedThing.parentNode.parentNode.parentNode.parentNode.getAttribute('id');
+            var gallery = swipedThing.parentNode.parentNode.parentNode.parentNode;
+            var dotsContainer = gallery.lastElementChild;
+            var currentSlide = document.getElementById(galleryName + '-current');
+        
+            var currentCaptionDuringLightbox = currentSlide.firstElementChild.lastElementChild.previousElementSibling;
+        
+            // find the current slide's index
+            var currentIndex = currentSlide.getAttribute('data-slide-index');
+
+            // if the reg view current slide has a caption
+            if (currentCaptionDuringLightbox.hasAttribute('data-galleryfigcaption')) {
+                currentCaptionDuringLightbox.style.display = "none";
+            }
+
+            // all functionality for building lightbox upon lightbox arrow click
+            var dotsLightboxContainer = swipedThing.parentNode.lastElementChild.previousElementSibling;
+
+            // get total number of slides in gallery; subtract 3 to prevent counting arrowContainer, dotsContainer, and placeholderBox
+            var slideCount = gallery.children.length - 3;
+
+            var currentLightbox = document.getElementById('singlelightbox');
+
+            // if current slide is not the first slide
+            if (currentSlide.getAttribute('data-slide-index') != 0) {
+
+                // id'ing previous slide
+                var clickedSideSlide = currentSlide.previousElementSibling;
+                // var clickedIndex = -1;
+                var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
+                // calls NAMED FUNCTION
+                advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
+                var imgToShow = clickedSideSlide.firstElementChild.firstElementChild;
+                // remove current lightbox
+                currentLightbox.parentNode.removeChild(currentLightbox);
+                // call NAMED lightbox function
+                lightbox(imgToShow);  
+                // call NAMED function to populate lightbox dots (defined in lightbox.js)
+                populateLightboxDots(imgToShow); 
+
+            } else {    // implied that retreat arrow was clicked when first slide was current
+
+                // id'ing the last slide
+                var clickedSideSlide = currentSlide.parentNode.lastElementChild.previousElementSibling.previousElementSibling.previousElementSibling;
+                var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
+                // calls NAMED FUNCTION
+                advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
+                var imgToShow = clickedSideSlide.firstElementChild.firstElementChild;
+                // remove current lightbox
+                currentLightbox.parentNode.removeChild(currentLightbox);
+                // call NAMED lightbox function
+                lightbox(imgToShow);  
+                // call NAMED function to populate lightbox dots (defined in lightbox.js)
+                populateLightboxDots(imgToShow); 
+
+            } // closing inner if/else statement
+
+        } // close if
+
+    }); // close swiped-RIGHT inner function
+} // close overall swipe reg. view function
 
 
 

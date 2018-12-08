@@ -2,15 +2,15 @@
 
 username: liaprins
 password: >
-  $2a$10$POddkqjLWsKSno1wHY4sj.dpoaa6dotS66uFk.byRixOSVO5EFjG2
+  $2y$10$OKhpcyXDcVbxB/BYFRjcZ.QQ3HPqFLPsUPCE.GdkudSjDzHYonqS2
 email: liajprins@gmail.com
 language: en
 role: admin
 history:
+  - liaprins
   - liaprins/watson-for-drug-discovery
   - liaprins/data-vis-guild
   - liaprins/worldly-birds
   - liaprins/curiosity
-  - liaprins/the-study-of-life
 firstname: Lia
 lastname: Prins

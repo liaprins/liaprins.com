@@ -3,3 +3,7 @@ Caption: An overview of all uploaded files makes it easy to find and place the r
 ----
 
 Alt: All files can be viewed together in a grid for quicker scanning.
+
+----
+
+Sort: 2
