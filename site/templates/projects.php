@@ -14,6 +14,9 @@
     <script src="assets/js/lightboxslideshow.js">
     </script>
 
+    <script src="assets/js/pure-swipe.js">
+    </script>
+
     <div id="bodysub">
 
 

@@ -3,3 +3,7 @@ Caption: My CMS’s interface lists sub-pages and uploaded files, and helps dire
 ----
 
 Alt: A left panel lists all sub-pages and files, while the right side of the CMS screen holds the content in organized fields.
+
+----
+
+Sort: 1
