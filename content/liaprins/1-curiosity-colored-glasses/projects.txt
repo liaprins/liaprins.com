@@ -4,7 +4,7 @@ Title: Curiosity-Colored Glasses
 
 Intro: 
 
-Since seventh grade, I have cultivated an ever-evolving collection of questions: How is helium harvested? Why does the moon perpetually keep the same face toward Earth? When preceding “glasses”, should I put a hyphen between “curiosity” and “colored”? I recorded the first quandary in my spiral-bound notebook well before Googling it was a feasible option. And while consulting Google for a quick answer is certainly a possibility now, **the questions on this list seem to deserve more: each harbors not only an answer but also a story; beyond simply satisfying my own curiosity, they possess the power to spark someone else’s**. So I built a website to log my investigations and their findings, with a secret agenda: to **provoke the capacity for a curiosity within my readership that changes the way they view the world**—from a birthday party balloon to the full moon, even to grammatically ambiguous blog titles.
+Since seventh grade, I have cultivated an ever-evolving collection of questions: How is helium harvested? Why does the moon perpetually keep the same face toward Earth? When preceding “glasses”, should I put a hyphen between “curiosity” and “colored”? I recorded the first quandary in my spiral-bound notebook well before Googling it was a feasible option. And while consulting Google for a quick answer is certainly a possibility now, **the questions on this list seem to deserve more: each harbors not only an answer but also a story; beyond simply satisfying my own curiosity, they possess the power to spark someone else’s**. So I built a (link: https://curiositycoloredglasses.com/ text: website target: blank) to log my investigations and their findings, with a secret agenda: to **provoke the capacity for a curiosity within my readership that changes the way they view the world**—from a birthday party balloon to the full moon, even to grammatically ambiguous blog titles.
 <!-- even to potential typos within blog titles. -->
 
 ----
@@ -71,7 +71,7 @@ Opportunities:
 
 - **A blog, by definition, provides the ability to publish to a potentially limitless audience.** If my readers were to walk away with comprehension at the very least—if not inspiration—I’d need to incorporate ways to welcome learners at all levels.
 
-- Each post would tell a different story, therefore requiring the freedom to be visually communicated in its own way as well. ** I’d have to design an interface that could accommodate varied illustration styles and detailed diagrams without coming across as busy or overwhelming.**
+- Each post tells a different story, therefore requiring the freedom to be visually communicated in its own way as well. ** I had to design an interface that could accommodate varied illustration styles and detailed diagrams without coming across as busy or overwhelming.**
 
 ----
 
@@ -89,6 +89,10 @@ When I read books as a kid, every time I came across a word I didn’t know I’
 
 (image: vocab-demo.gif)
 
+The Question Queue stores a list of my forthcoming investigations. It was tricky, but I programmed it so that I can continuously add more entries via my CMS as they pop into my mind, and the page will automatically place the question onto one of the parallax layers and lengthen the page as whole. I randomized each pair of binoculars' margins with PHP so the page layout looks more organic. A long series of JavaScript if-statements carefully places the opened question boxes, preventing them from extending off the page. In future I'd like to add a voting system, so readers can up-vote the topics they’re most interested in.
+
+(image: qq.gif)
+
 I decided to pay homage to my most trusted and consulted resources by way of a “library” page. Readers can explore an array of illustrations each standing in for a book, video, podcast, person, or other resource.
 
 (image: library.jpg)
@@ -105,6 +109,8 @@ Livelearn: - **I relished this project as an opportunity to bring my vision into
 
 Stats: 
 
+**Landing page:** (link: https://curiositycoloredglasses.com/ target: blank)
+**Behind-the-scenes sneak peek:** (link: https://curiositycoloredglasses.com/blog target: blank)
 **Project pretext:** Personal
 **Assignment:** Design and code my own blog
 **Timeframe:** 2 years off-and-on from conception to planned launch (not counting the question gathering lead-up that started back in middle school)

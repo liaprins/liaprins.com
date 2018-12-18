@@ -31,7 +31,8 @@ h6 {
 h2 {
     letter-spacing: 0.15px;
     line-height: 1.5;
-    margin-bottom: 35px;    }
+    margin-bottom: 35px;
+    font-size: 22.326px;    }
 
 h3 {
     letter-spacing: 0.4px;
@@ -224,7 +225,8 @@ a {
 
     h2 {
         letter-spacing: 0.03vw;
-        margin-bottom: 7.91vw;    }
+        margin-bottom: 7.91vw;
+        font-size: 5.051vw;     }
 
     h3 {
         letter-spacing: 0.09vw;    }
@@ -360,7 +362,8 @@ a {
 
     h2 {
         letter-spacing: 0.2px;
-        margin-bottom: 51.42px;    }
+        margin-bottom: 51.42px;
+        font-size: 28px;     }
 
     h3 {
         letter-spacing: 0.585px;    }
@@ -471,6 +474,17 @@ a {
 
 }    /* 650px ++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
+
+
+
+/* 756px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media only screen and (min-width: 650px) and (max-width: 756px) {
+
+    h2 {
+        font-size: 3.68vw;     }
+
+}    /* 756px ++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 
 

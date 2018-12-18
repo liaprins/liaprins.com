@@ -49,7 +49,7 @@ Resume:
 
 ----
 
-Aboutoverview: Welcome to my website!* I’m an information designer with an unflagging affection for science com­mu­ni­ca­tion, learning, and, perhaps less predictably, antiquated office supplies. Hailing from the Pacific Northwest, I studied biology, art, and design at the University of Washington before moving to Austin a few years ago to collect on my sunlight debt.
+Aboutoverview: Welcome to my website!* I’m a UX and data vis designer <!--an information designer--> with an unflagging affection for science com­mu­ni­ca­tion, learning, and, perhaps less predictably, antiquated office supplies. Hailing from the Pacific Northwest, I studied biology, art, and design at the University of Washington before moving to Austin a few years ago to collect on my sunlight debt.
 
 ----
 
