@@ -192,6 +192,10 @@ a {
     opacity: 1;
     cursor: pointer;    }
 
+sup {
+    vertical-align: super;
+    font-size: 0.75em;    }
+
 
 
 

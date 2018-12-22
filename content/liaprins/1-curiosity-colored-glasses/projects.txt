@@ -29,11 +29,11 @@ I sought out every opportunity to hijack the user’s experience with delight, a
 
 (image: loader-animation.gif)
 
-(image: postglasses.gif)
+(image: hover-instagram-video.gif)
 
 (image: comment-avatars.jpg)
 
-I planned to code my whole site and its content management system (CMS) from scratch as an incentive to brush-up on my browser-based coding skills (but mostly so that I could have complete control over its every detail … muahahaha!). I selected a lightweight, file-based CMS called Kirby to provide the integrations between my blog’s coded structure and its content. This meant I’d have to learn new languages: PHP to make my site dynamic and link it to the content, YAML to create the CMS itself, and Javascript to build out some of the behaviors my design called for.
+I planned to code my whole site and its content management system (CMS) from scratch as an incentive to brush-up on my browser-based coding skills (but mostly so that I could have complete control over its every detail … muahahaha!). I selected a lightweight, file-based CMS called Kirby to provide the integrations between my blog’s coded structure and its content. This meant I’d have to learn new languages: PHP to make my site dynamic and link it to the content, YAML to create the CMS itself, and JavaScript to build out some of the behaviors my design called for.
 
 (image: books.jpg)
 
@@ -89,7 +89,7 @@ When I read books as a kid, every time I came across a word I didn’t know I’
 
 (image: vocab-demo.gif)
 
-The Question Queue stores a list of my forthcoming investigations. It was tricky, but I programmed it so that I can continuously add more entries via my CMS as they pop into my mind, and the page will automatically place the question onto one of the parallax layers and lengthen the page as whole. I randomized each pair of binoculars' margins with PHP so the page layout looks more organic. A long series of JavaScript if-statements carefully places the opened question boxes, preventing them from extending off the page. In future I'd like to add a voting system, so readers can up-vote the topics they’re most interested in.
+The Question Queue stores a list of my forthcoming investigations. In the future I’d like to add a voting system, so readers can up-vote the topics they’re most interested in.
 
 (image: qq.gif)
 

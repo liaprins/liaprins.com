@@ -35,9 +35,9 @@ Listen for yourself to neuroscientist Doug Fields’ inspiring account as told t
 </figcaption>
 </figure>
 
-I located a chapter’s worth of open-source text introducing cells as the building blocks of life, and set to work restructuring it in an ardent attempt to ward off the feared *re-re-reading syndrome*&ast; to which I frequently succumb when faced with unfamiliar information lacking a logical and clear structure. Once I had sorted the text into a roughly linear framework, I began to identify areas that would benefit from some sort of visual assistance in order to be better understood or engaged with. 
+I located a chapter’s worth of open-source text introducing cells as the building blocks of life, and set to work restructuring it in an ardent attempt to ward off the feared *re-re-reading syndrome*<sup> 1</sup> to which I frequently succumb when faced with unfamiliar information lacking a logical and clear structure. Once I had sorted the text into a roughly linear framework, I began to identify areas that would benefit from some sort of visual assistance in order to be better understood or engaged with. 
 
-(text: *Re-re-reading syndrome, as I irritatingly call it, is a common condition in which the reader repeats what they’ve just read several times, due to lack of comprehension. class: asterisk)
+(text: <sup>1 </sup>Re-re-reading syndrome, as I irritatingly call it, is a common condition in which the reader repeats what they’ve just read several times, due to lack of comprehension. class: asterisk)
 
 (image: pacing.jpg)
 
