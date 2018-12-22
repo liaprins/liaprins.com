@@ -7,10 +7,10 @@ email: liajprins@gmail.com
 language: en
 role: admin
 history:
-  - liaprins/p5-responsive-library
   - liaprins/curiosity-colored-glasses
-  - liaprins
   - liaprins/watson-for-drug-discovery
-  - liaprins/data-vis-guild
+  - liaprins/curiosity
+  - liaprins/the-study-of-life
+  - liaprins/worldly-birds
 firstname: Lia
 lastname: Prins

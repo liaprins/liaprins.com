@@ -2,7 +2,7 @@ Caption: The interactions within my designs for galleries and lightboxes resulte
 
 ----
 
-Alt: I printed a list of all interactions and subsequent behaviors my gallery and lightbox modules would need to accommodate. Then I took colored ballpoint pens and encoded those list items that accomplished the same effect, and could thereby use the same Javascript function.
+Alt: I printed a list of all interactions and subsequent behaviors my gallery and lightbox modules would need to accommodate. Then I took colored ballpoint pens and encoded those list items that accomplished the same effect, and could thereby use the same JavaScript function.
 
 ----
 
