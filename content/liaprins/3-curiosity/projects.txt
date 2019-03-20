@@ -95,5 +95,6 @@ Livelearn:
 Stats: 
 
 **Project pretext:** Academic
-**Assignment:** Design print and tablet versions of a fictitious publication
+**Objective:** Design print and tablet versions of a fictitious publication
 **Timeframe:** 8 weeks
+**Target audience:** Anyone with a desire to better understand the world around them

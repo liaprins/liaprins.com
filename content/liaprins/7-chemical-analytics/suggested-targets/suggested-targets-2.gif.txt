@@ -1,0 +1,5 @@
+Caption: The other rows can easily all be opened or closed simultaneously, depending upon whether the user would rather scan the resulting gene's metadata, or have a more holistic picture of the compounds that led to its rank.
+
+----
+
+Alt: An animated .GIF demonstrating the ability to toggle open or closed all rows via a master switch.

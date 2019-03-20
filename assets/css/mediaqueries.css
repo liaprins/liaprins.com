@@ -208,7 +208,7 @@
         border-width: 1.755px;    }
 
     #bottomspacer {
-        height: calc((2 * 26.19vw) + 10.714vw);    }    /* (number of tiles high at this screenwidth [adjust if project count changes!] * height of tile INCLUDING THIN MARGIN HEIGHT) + 3/28cols */
+        height: calc((3 * 26.19vw) + 10.714vw);    }    /* (number of tiles high at this screenwidth [adjust if project count changes!] * height of tile INCLUDING THIN MARGIN HEIGHT) + 3/28cols */
 
     /* LIGHTBOXSLIDESHOW STYLES ---------------------------------------------------- */
 
@@ -359,7 +359,7 @@
     #bottomspacer {
         /* height: calc((3 * 254.828px) + 104.247px); */    /* (number of tiles high at this screenwidth [adjust if project count changes!] * height of tile INCLUDING THIN MARGIN HEIGHT) + 3/28cols */
         /* height: 1px; */
-        height: calc(2 * 254.828px);    }
+        height: calc(3 * 254.828px);    }
 
     .contentimage { 
         max-width: 765px;    }    /* 22/28 cols at 973px screenwidth */

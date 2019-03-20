@@ -116,5 +116,6 @@ Livelearn:
 Stats: 
 
 **Project pretext:** Academic
-**Assignment:** Create a capstone project of my own design
+**Objective:** Create a capstone project of my own design
 **Timeframe:** 10 weeks
+**Target users:** High school biology students

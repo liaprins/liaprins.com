@@ -1,0 +1,5 @@
+Caption: This alternative layout culls together all the meta-data relating to the suggested target itself into a vertical stack of information at the far left, which allows several contributing compounds to be seen simultaneously. Sorting is maintained via a dropdown rather than table columns like in the first iteration.
+
+----
+
+Alt: An alternative layout in which the target metadata is arranged together in a single stacked column, allowing the remaining columns to be occupied by the contributing compounds.

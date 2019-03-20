@@ -1,0 +1,5 @@
+Caption: A chemist might wonder how a chemical nearly identical to their input would fare: would it have more predicted targets compared to those already written about in literature? They can easily edit their original input molecule by a few atoms and re-run their search to find out.
+
+----
+
+Alt: An animation in which the user changes their input chemical by a few atoms via a chemical drawing tool, and re-runs their query.

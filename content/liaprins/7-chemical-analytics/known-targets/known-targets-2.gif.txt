@@ -1,0 +1,5 @@
+Caption: The known targets tab in CA is just a list version of all gene targets known to be related to the users input. It can also be visualized as a network, though, with the input chemical at the center, connected by definition to all resulting genes in the list.
+
+----
+
+Alt: An animated .GIF shows what happens when a user clicks the "View evidence in Explore a Network" link from the known targets tab: the network opens with the user's input from Chemical Analytics at the center, and all the listed known targets surrounding and linked to it.

@@ -1,0 +1,9 @@
+Caption: Even if you think you know exactly how to solve a problem, more likely than not, you'll start to realize many more nuances as you begin to test your initial solution out. The more ideas your throw against the problem, the more you'll learn about it.
+
+----
+
+Alt: "The act of iterating through good* ideas facilitates exploration of the problem space, thereby avoiding design icebergs." Illustrated by a sketch of an above-sea-level ice berg tip, and a big Titanic-esque boat for context. And another sketch of the same iceberg below sea level and much much larger, being explored by a scuba diver with a flashlight, and accompanied by a few lightbulb-fish.
+
+----
+
+Sort: 10

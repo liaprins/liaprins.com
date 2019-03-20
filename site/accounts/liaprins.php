@@ -7,10 +7,11 @@ email: liajprins@gmail.com
 language: en
 role: admin
 history:
-  - liaprins/curiosity-colored-glasses
+  - >
+    liaprins/watson-for-patient-safety-ia-maps
+  - liaprins/sketching-for-ideas
+  - liaprins/chemical-analytics
   - liaprins/watson-for-drug-discovery
   - liaprins/curiosity
-  - liaprins/the-study-of-life
-  - liaprins/worldly-birds
 firstname: Lia
 lastname: Prins

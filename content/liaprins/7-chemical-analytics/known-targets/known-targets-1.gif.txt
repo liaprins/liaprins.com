@@ -1,0 +1,5 @@
+Caption: The table of known target is default-sorted by citation count, but a user can choose to sort alphabetically to look for a specific gene of interest, or can cluster by relationship type.
+
+----
+
+Alt: An animated .GIF demonstrates the ability to sort the table of known targets by name, relationship type, and citation count.

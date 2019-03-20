@@ -1,0 +1,5 @@
+Caption: 
+
+----
+
+Alt: The network now shows one of the genes as input at the center, with links connecting to chemicals, and one chemical without a link connecting it, which represents the user's chemical input into Chemical Analytics.

@@ -77,7 +77,7 @@ Opportunities:
 
 Outcomes: 
 
-(link: http://curiositycoloredglasses.com/ text: curiositycoloredglasses.com target: blank) will say “Hello, World!” a little later in 2018. Until then, screen captures from the version on my localhost can convey a sense of what to expect.
+(link: http://curiositycoloredglasses.com/ text: curiositycoloredglasses.com target: blank) will say “Hello, World!” a little later, in the early spring of 2019. Until then, screen captures from the version on my localhost can convey a sense of what to expect.
 
 (image: hover-demo.gif)
 
@@ -112,5 +112,6 @@ Stats:
 **Landing page:** (link: https://curiositycoloredglasses.com/ target: blank)
 **Behind-the-scenes sneak peek:** (link: https://curiositycoloredglasses.com/blog target: blank)
 **Project pretext:** Personal
-**Assignment:** Design and code my own blog
+**Objective:** Design and code my own blog
 **Timeframe:** 2 years off-and-on from conception to planned launch (not counting the question gathering lead-up that started back in middle school)
+**Target audience:** Anyone with a desire to better understand the world in which we live

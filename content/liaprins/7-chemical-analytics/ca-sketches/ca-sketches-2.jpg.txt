@@ -1,0 +1,5 @@
+Caption: Rather than capping the total compounds permitted to contribute to a gene's total score, another idea was to allow unlimited compounds. I sketched ways to accommodate massive contribution scores, while maintaining a framework that communicated the score's breakdown and whether it had been arrived at via a single highly similar compound or multiple less-similar compounds.
+
+----
+
+Alt: More score visualization sketches, and an illustration of a way to indicate the parts of the chemical structure responsible similar to the user's input.
