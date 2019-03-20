@@ -178,7 +178,7 @@ details[open] .sectionplus {
     background-color: black;    }
 
 #bottomspacer {
-    height: calc((3 * 39.28vw) + 10.714vw);    }    /* (number of tiles high at this screenwidth [adjust if project count changes!] * height of tile INCLUDING THIN MARGIN HEIGHT) + 3/28cols */
+    height: calc((5 * 39.28vw) + 10.714vw);    }    /* (number of tiles high at this screenwidth [adjust if project count changes!] * height of tile INCLUDING THIN MARGIN HEIGHT) + 3/28cols */
 
 .postvideo-4-3-ratio {
     width: 78.571vw;

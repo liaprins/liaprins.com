@@ -1,0 +1,5 @@
+Caption: The prototype was a bare bones UI, just enough of a skeleton to show results, scores, and a bit of evidence in the form of which compounds had contributed to the target's rank. This also meant I could start the interface design from a blank slate!
+
+----
+
+Alt: The prototype built to test the concept internally showed multiple scores: one for each suggested target, and one for each contributing compound (of which there are five per target).

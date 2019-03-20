@@ -1,0 +1,5 @@
+Caption: When I explored layouts for a security portal, I mapped color to each type of content, to make the options easier to compare.
+
+----
+
+Alt: Five mini UI sketches explore layout possibilities to accommodate multiple content types, such as images, videos, and text. Each content type is color-coded consistently across all sketches to aid in comparison.

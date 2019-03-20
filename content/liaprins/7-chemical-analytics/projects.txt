@@ -1,0 +1,105 @@
+Title: Chemical Analytics
+
+----
+
+Thumbnail: chemical-analytics2.png
+
+----
+
+Intro: To find a cure for a disease like cancer, a chemist must perform the difficult duty of identifying a compound that affects one or more of the involved genes. IBM’s Watson for Drug Discovery acts as a formidable ally in this otherwise onerous task, parsing scientific publications via natural language processing to expose and predict relationships between genes, drugs, and diseases. While awareness of relevant work in the field is an imperative component in building a biomedical researcher’s context, the semantic relationships surfaced by Watson don’t tell the full story. **But by leveraging Watson’s linguistic capabilities in combination with mathematical measurements of chemical similarity, we could yield results rooted in both unstructured and structured data types: each would, in a way, cover for the weaknesses of the other.** This solution—suggested and developed by the IBM research scientist with whom I worked on the project—was brilliant, but it did pose its own design challenges in terms of how to communicate the ways that these two seemingly disparate data types worked together to generate predictions. **Scientists are inquisitive skeptics by nature, so without visibility into the system’s logic and reasoning, they’d never trust its outputs enough to benefit from them.**
+
+----
+
+Stats: 
+
+**Project pretext:** Professional
+**Objective:** Design an interface to accommodate and explain the supporting rationale for predicted gene targets for an input compound
+**Timeframe:** 3 weeks
+**Role:** Lead UX designer
+**Additional team members:** 1 research scientist, 1 front-end developer
+**Target users:** Biomedical researchers and chemists in pharma and academia
+
+----
+
+Opportunities: 
+
+- The cognitive services that comprise Watson identify relationships in scientific literature between genes and compounds. By leveraging a database that draws connections between chemicals according to their structural similarity, the system could predict genes that might be targets for a compound of interest. Predictions would made by finding compounds most similar to the user’s input compound, and then identifying the genes known—according to literature—to be their targets. **This novel method by which to suggest possible relationships could help the users of Watson for Drug Discovery (WDD) discover new applications for existing molecules and treatments.**
+
+- This new approach to prediction—and its scoring mechanism for ranking results—would need to be explained in the interface. Ideally, I’d be able to **visualize each resulting target’s score in a way that spoke to both the chemical similarity and the known relationships that together brought about its rank** relative to other potential targets.
+
+----
+
+Process: 
+
+I started by learning all that I could about the technology that would be used behind the screen to generate results and predictions. In this case that meant dredging the brain of the research scientist with whom I was collaborating, and then pouring all my learnings onto paper so I could play it back and identify areas where I still had gaps in understanding.
+
+(image: self-education.jpg)
+
+It’s important to me to get feedback from other designers as I begin to explore any problem space and work toward a solution. In this case, that inherently meant that I’d need to provide some context as to how the data was being pulled together to generate the predictions that I would in turn strive to clarify for users. I developed my initial rough sketches into a sequence of low-fidelity storyboards to conceptually illustrate what went on behind the screen, so I could preface design-based feedback sessions with a bit of background.
+
+(gallery: design-education)
+
+My research scientist collaborator had built a prototype for internal testing. We decided to get some Watson for Drug Discovery (WDD) users’ first impressions to validate the usefulness of the underlying technological concept, but also to have some insight into what they’d need in the final UI design.
+
+(image: prototype.jpg)
+
+The gene targets suggested for an input chemical are ranked according to a score based on the *number* of found compounds with structures similar to the input, as well as exactly *how similar* these contributing compounds are. However, none of this provenance was apparent in the drawn-out decimal digits of the numeric score itself, which proved problematic to potential users.
+
+(text: “I don't understand how those two scores come up to 0.05 … Does that mean it's 5% likely?  I don't understand the translation behind it so it's not meaningful to me. Other than assuming a higher number is a better score.” class: pullquote)
+(text: —WDD user when exploring the Chemical Analytics prototype class: pullquoter)
+
+Data transparency is one of my primary, personal design philosophies, so I wholeheartedly empathized with our users regarding the obfuscated scores: if they were ever to understand—let alone trust—the predictions we provided them, we’d have to explicitly expose the process and data used. So with pen in hand I set to work exploring ways to reveal the relationships between the count and similarity levels of the contributing compounds supporting each suggested gene.
+
+(gallery: ca-sketches)
+
+Once I’d shared my sketched concepts with my collaborators on the development side, as well as with other designers, I brought some of my more promising ideas forward into the digital realm, and continued to iterate on more detailed aspects of the user’s workflow.
+
+(image: sketch-screenshot.jpg)
+
+(gallery: ca-wireframes)
+
+<!--
+One way to actively build transparency into WDD's target prediction algorithm would be to empower the user to manipulate the contributing variables themselves: as they changed the thresholds (of the allowed total and minimum chemical similarity of supporting compounds), the outcomes (in the form of the targets that appeared as predictions) would also change, enabling users to tangibly recognize the weight that each factor of the formula held. I mocked up one way in which this functionality could be integrated into a legend that simultaneously explained the scoring visualization I had settled on.
+
+[INSERT LIVE LEGEND FILTER SEQUENCE/GIF]
+
+I learned this idea wasn't feasible after the developer I worked with looked into it further; results could only update if the query and data calculations re-ran, so live filtering was not possible in the short term. However, we arrived at a solution with minimal trade-offs: the user could still set the maximum count and minimum similarity for contributing compounds, and once they ran their search again the new settings would apply.
+-->
+
+----
+
+Outcomes: 
+
+<!--
+To ensure our inquisitive users had ample opportunity to come to an understanding of the new target prediction feature, which we’d taken to calling Chemical Analytics (CA), I turned my initial conceptual illustrations into a series of slides that would help to educate anyone upon their first visit to the application. Users could access these visual explanations at any time through a link in the UI, following a pattern I’d established in other designs across WDD.
+
+[INSERT NEW CAROUSEL]
+-->
+
+When a user searches CA for a drug’s predicted targets, the resulting table by default displays just the predicted gene’s name, score, and the likely biological relationship type between it and the searched chemical, to facilitate more efficient comparisons. Once a user spots an interesting prediction, however, they can quickly toggle open the row to view its evidence: the compounds similar to their input that are known to effect the suggested gene, and that contributed to its score and rank, are listed by name and shown in structural form.
+
+(gallery: suggested-targets)
+
+In addition to *predicting* targets for a chemical of interest, it was important to surface the genes that had *already been confirmed* in scientific publications to be targets of the drug. This would help to paint a more complete picture of a user’s input chemical relative to both its validated and potential targets. A different querying tool within WDD displays these "known" connections—identified within literature via natural language processing—as a network diagram. In CA it made more sense to present the list of known genes as a table that could be sorted by the number of supporting documents or alphabetically to index targets by name. I included a link in the UI that opens WDD’s network app so users could visually reference the relationships between their input compound and all of its existing targets.
+
+(gallery: known-targets)
+
+Each compound that contributes to a predicted gene’s score is first assigned its own individual score based on its structural similarity to the user’s input drug. The mathematical method used to calculate similarity between two molecules is called the Tanimoto co-efficient, and its output scores vary between 0 (no similarity) and 1 (identical). But because CA users can set a minimum similarity threshold, which all contributing compounds must equal or surpass, it didn’t quite make sense to simply sum their individual similarity scores into an aggregate “prediction score” for the target that they collectively supported: compounds that only just met the user’s minimum threshold still held the potential to contribute disproportionately high quantities to the total score, unfairly failing to differentiate their contributions enough from near doppelgängers of the input drug. This was especially the case if a user set a very high minimum similarity threshold, which ironically almost always meant that they particularly valued the input of extremely similar compounds over others. 
+
+(gallery: score-education)
+
+Score *enrichment* was necessary: the score of each compound that made it through the minimum similarity filter would be recalibrated to reflect its relative proportion beyond the minimum. These scores and the formulas hiding behind them are complex concepts, but I believed that they could be effectively expounded upon via visuals. I built the concept of enrichment into the bars representing both individual and aggregate scores, and developed another score-centric set of sequential illustrations to illuminate the idea.
+
+(text: “Drug prediction for drug-target interaction is a difficult thing to do. I would love to test these [predictions] empirically. The commercial value would be huge. If your software is able to predict and validate anything that is not known, that would be a big, big splash.” class: pullquote)
+(text: —WDD user when exploring Chemical Analytics post-launch class: pullquoter)
+<!-- https://ibm.box.com/s/up2bn39fabucxpmir4cz568i2jz3rxba -->
+
+Once CA launched, I met with some chemists to get their take on both its usefulness as a technology, and its usability from a design perspective. Overall, the feedback has been promising, and has given us ideas for enhancing it in the future even further.
+
+----
+
+Livelearn: 
+
+- I vehemently validated an awareness I’d already had prior to this project: that **I *love* to collaborate with others whose strengths differ from my own, but who operate in industries of interest to me**. My collaborators on this project and I each had our own expertise, and trusted each other fully to do our jobs. We worked through trade-offs between feasibility and the overall user experience, simultaneously planning future iterations to improve upon the functionality so far provided. 
+
+- **I built upon previous knowledge I’d actively acquired in other undertakings**, around concepts like natural language processing and its accompanying annotators, measures of molecular similarity, and even storytelling.

@@ -1,0 +1,5 @@
+Caption: Visually, enrichment is akin to moving the “0” end of the scoring spectrum up to the level of the minimum similarity threshold, without scaling the compounds’ original similarity scores along with it.
+
+----
+
+Alt: A diagram centered around a single bar from a bar chart, explaining how enrichment affects each contributing compound's output score.

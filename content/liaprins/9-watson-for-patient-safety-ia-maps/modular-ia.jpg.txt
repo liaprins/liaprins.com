@@ -1,0 +1,5 @@
+Caption: Although I'd worked hard to make my original IA map readable, it was just too detailed. The overhaul removed the detail into separate maps, allowing the master map to function as a higher-level overview.
+
+----
+
+Alt: My original IA map, pre-modularization on the left, compared to my post-modularized IA map on the right, occupying about half the space.

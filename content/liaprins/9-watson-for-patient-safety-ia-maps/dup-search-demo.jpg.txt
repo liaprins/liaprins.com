@@ -1,0 +1,5 @@
+Caption: In my redesign for the duplicate search flow, Watson would run a search as soon as a new document arrived, using natural language processing to identify the necessary patient details to search on. Oftentimes, incoming reports—whether follow-ups or not—don't contain all required patient information, or some of it is incorrect (hence the need for case processors to request follow-ups in the first place). Therefore, many existing reports in the pharmaceutical's database may meet the searched criteria on some fields, but not others. My design enabled an administrator to specify the combinations of fields that should yield higher rankings within the collection of found cases Watson's returned after running the automatic duplicate search.
+
+----
+
+Alt: A zoomed-in decision tree with color-coded example outputs.

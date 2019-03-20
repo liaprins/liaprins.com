@@ -1,0 +1,5 @@
+Caption: Other tools I’d worked on in Watson Health were much more discovery-centric than task-focused. We’d organized Watson for Drug Discovery’s IA to facilitate exploration, and as such, a high-level structure of its information organization revealed a shallow shape. Watson for Patient Safety, however, would be different, accommodating depth, focus, and cascading decision trees to enable efficient task completion. I created this visual at the end of my information architecture project-tangent, as part of a presentation I delivered to a UX guild in Watson Health.
+
+----
+
+Alt: A wide and shallow figurative IA map for a discovery-oriented workflow on the left end of the spectrum, and a task-oriented figurative IA map on the left, deep, narrow, and generally opposite in shape.

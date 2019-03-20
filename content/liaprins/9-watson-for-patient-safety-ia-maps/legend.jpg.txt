@@ -1,0 +1,5 @@
+Caption: I used a box's fill color to represent the user role(s) that had access to it, making it simpler to scan and follow the flow of a single role type. I also used hue to keep the plethora of paths somewhat separate visually, although it bothered me a bit to be using color inconsistently across the nodes and links of the map. It was important, however, to harness the saliency of color to enable easier path-tracking.
+
+----
+
+Alt: The legend for my IA maps, with colored boxes indicating user "stops" within their flow, and colored and textured arrows indicating specific flows.

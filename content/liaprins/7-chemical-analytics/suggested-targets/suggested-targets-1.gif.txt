@@ -1,0 +1,5 @@
+Caption: Once the predictions are generated for an input, the compounds contributing to the score for the highest-ranked gene are shown by default.
+
+----
+
+Alt: An animated .GIF shows how results render once a user inputs a chemical.
