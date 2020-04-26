@@ -2,4 +2,4 @@ Caption: A chemist might wonder how a chemical nearly identical to their input w
 
 ----
 
-Alt: An animation in which the user changes their input chemical by a few atoms via a chemical drawing tool, and re-runs their query.
+Alt: alt

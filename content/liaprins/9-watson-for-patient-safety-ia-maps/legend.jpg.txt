@@ -2,4 +2,4 @@ Caption: I used a box's fill color to represent the user role(s) that had access
 
 ----
 
-Alt: The legend for my IA maps, with colored boxes indicating user "stops" within their flow, and colored and textured arrows indicating specific flows.
+Alt: alt

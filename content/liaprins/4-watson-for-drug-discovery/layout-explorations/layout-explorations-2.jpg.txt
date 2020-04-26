@@ -1,0 +1,9 @@
+Caption: 
+
+Another tactic I explored was to keep the list and force diagram together in a single view, since they both derived from the users' inputs directly, and functioned as alternative views. Showing them together might help to build this understanding as well. Drilling into the word spectrum as an optional second step, in a second screen, would keep the workflow sequential enough to help the user focus and not overwhelm them.
+<p class="figcaptionspacer"></p>
+One problem still remained, though, in that the user would need to return to the list or force diagram over and over to change the genes they examined evidence for in the word spectrum.
+
+----
+
+Alt: Two screen sketches: one of the list and force diagram together, and one of the word spectrum on its own.

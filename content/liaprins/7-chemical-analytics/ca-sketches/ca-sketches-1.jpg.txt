@@ -2,4 +2,4 @@ Caption: Two predicted targets could share the same score (which also meant they
 
 ----
 
-Alt: A pair of my sketch pages, with drawn explorations of possible score visualizations.
+Alt: alt

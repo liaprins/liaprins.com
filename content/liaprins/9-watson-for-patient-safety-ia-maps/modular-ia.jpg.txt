@@ -2,4 +2,4 @@ Caption: Although I'd worked hard to make my original IA map readable, it was ju
 
 ----
 
-Alt: My original IA map, pre-modularization on the left, compared to my post-modularized IA map on the right, occupying about half the space.
+Alt: alt

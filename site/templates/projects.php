@@ -26,7 +26,7 @@
         <a href="<?= url() ?>">
         <!-- <a href="../liaprins"> -->
             <!-- <img src="../assets/images/back.svg" alt="Back to all projects" id="back"> -->
-            <img src="assets/images/back.svg" alt="Back to all projects" title="View all projects" id="back">
+            <img src="assets/images/back.svg" alt="Back to all projects" id="back">
         </a>
 
         <h1>

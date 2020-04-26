@@ -2,4 +2,4 @@ Caption: The act of saving changes to a report is an important aspect of case pr
 
 ----
 
-Alt: A micro-flow mapping the user's options and routes for saving, not saving, or canceling upon attempting to leave a screen without having first manually saved changes.
+Alt: alt

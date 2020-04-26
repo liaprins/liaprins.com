@@ -2,4 +2,4 @@ Caption: A user can change the minimum similarity threshold, which changes which
 
 ----
 
-Alt: An animation in which the user changes the minimum similarity threshold for contributing compounds, which results in different and fewer results.
+Alt: alt

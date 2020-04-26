@@ -2,4 +2,4 @@ Caption: An existing network visualization within WDD allows users to explore ev
 
 ----
 
-Alt: The user selects to view a single row's target and its contributing compounds in the Explore a Network visualization via a link in Chemical Analytics.
+Alt: alt

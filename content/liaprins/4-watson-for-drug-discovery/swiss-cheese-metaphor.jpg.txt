@@ -1,0 +1,9 @@
+Caption: 
+
+I always think of Swiss cheese for some (yummy) reason when it comes to semantic fingerprinting. The semantic profiles of two concepts being compared can each be represented by separate slices. If they're overlaid to compare their profiles, their similarities will be wherever the light shines through (yellow in my sketch here). The more light shining through, the more similar the two are semantically. 
+<p class="figcaptionspacer"></p>
+While this works well as a conceptual metaphor for the "fingerprinting" used by WDD, the actual algorithms used many more dimensions than could be accommodated accurately in a simple 2D scatterplot of Swiss cheese holes.
+
+----
+
+Alt: Blue and pink Swiss cheese illustrations overlap to show where the light shines through their holes.

@@ -41,6 +41,10 @@ I located a chapter’s worth of open-source text introducing cells as the build
 
 (image: pacing.jpg)
 
+My own interest and appreciation of biology informed the visual style of my book. I knew I wanted it to exude energy like the science it would teach about, but I also needed it to feel grown-up, not patronizing or childish, so I looked for visual inspiration outside of existing textbooks—in magazines, online, and even from nature documentaries.
+
+(image: moodboard.jpg)
+
 I used Adobe InDesign’s Digital Publishing Suite to design and export my book chapter, taking advantage of the technology to bring my illustrations to life with interaction. Some single-celled organisms use small hair-like structures called cilia to navigate their environment; this movement-centric concept seemed to beg to be animated in some way. I decided to build the motion of these cilia into a flipbook-like module that the user could flick through.
 
 (image: interactive.jpg)
@@ -52,6 +56,10 @@ After designing each interactive element for my book chapter, I identified the t
 (image: sketch.jpg)
 
 (image: nav-icons-artboard-black.png)
+
+I developed and relied on a strong grid system, type scale, and color palette to keep the various elements of my design cohesive and structured. 
+
+(image: grid.jpg)
 
 ----
 
@@ -117,5 +125,5 @@ Stats:
 
 **Project pretext:** Academic
 **Objective:** Create a capstone project of my own design
-**Timeframe:** 10 weeks
+**Timeframe:** 5 weeks
 **Target users:** High school biology students

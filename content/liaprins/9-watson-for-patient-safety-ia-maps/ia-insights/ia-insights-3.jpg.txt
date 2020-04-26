@@ -2,7 +2,7 @@ Caption:
 
 ----
 
-Alt: 
+Alt: "What is an information architecture map? ... “The science of figuring out what you want your site to do and then constructing a blueprint before you dive in and put the thing together.” — Wired’s Information Architecture Tutorial ... You can think of it as the documentation for how the information is structured relative to itself." There is also an example of an IA map in the form of a site map of a website.
 
 ----
 

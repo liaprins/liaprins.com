@@ -2,4 +2,4 @@ Caption: The table of known target is default-sorted by citation count, but a us
 
 ----
 
-Alt: An animated .GIF demonstrates the ability to sort the table of known targets by name, relationship type, and citation count.
+Alt: alt

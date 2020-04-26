@@ -3,7 +3,3 @@ Caption: Each uploaded image has its own sub-page within the CMS, which I coded 
 ----
 
 Alt: Individual files’ metadata can be edited, including the alt tags (which I am doing at this very moment!).
-
-----
-
-Sort: 3

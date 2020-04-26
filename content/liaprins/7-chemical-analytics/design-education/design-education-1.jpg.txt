@@ -2,4 +2,4 @@ Caption:
 
 ----
 
-Alt: The network visualization from Watson for Drug Discovery is shown with links between an input chemical and found genes highlighted. For each highlighted edge, supporting documents are referenced with arrows.
+Alt: 

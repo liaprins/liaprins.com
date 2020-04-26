@@ -1,0 +1,9 @@
+Caption: 
+
+Pros to keeping the visualizations distinct steps included the fact that the sequential nature of experiencing each individually might help the user focus, and not overwhelm them. If the word spectrum was shown from the get-go, it would be empty until the user selected two genes from the list or the force diagram, which might be confusing.
+<p class="figcaptionspacer"></p>
+However, the user could not compare the list to the force diagram in a single view. They'd also have to continuously navigate back and forth between the list or force diagram and the word spectrum to select new genes.
+
+----
+
+Alt: A sketch of three distinct visualizations: the list leading into the force diagram, which in turn leads into the word spectrum.

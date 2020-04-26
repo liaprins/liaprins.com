@@ -2,4 +2,4 @@ Caption: Once the predictions are generated for an input, the compounds contribu
 
 ----
 
-Alt: An animated .GIF shows how results render once a user inputs a chemical.
+Alt: alt

@@ -24,6 +24,10 @@ Opening the wet lab to a long list of genes suspected to be connected to a disea
 
 (text: <sup>2 </sup>When it concerns Watson, an entity refers to a single biological concept consisting of various synonyms in literature. Aspirin and acetylsalicylic acid both represent the same molecule, so they are synonyms of the same entity. The cognitive services that make up Watson look only at entities in order to make accurate but otherwise easily missed connections. The algorithms used for this project recognize entities resolved from synonyms that refer to a gene, a chemical, or a disease. class: asterisk)
 
+(image: swiss-cheese-metaphor.jpg)
+
+At a high level, a biomedical researcher can query WDD as to which of their hypothesized gene targets are semantically similar to gene targets already *known* to be related to their disease of interest. Their hypothesized genes and the known gens would each have "semantic fingerprints" representing the way they were collectively discussed in scientific publications, and the terms they were co-mentioned with. These semantic fingerprints from each group could then be compared, to predict which of the user's hypotheses most resembled the known genes. 
+
 The data science behind PA is complex; it goes far beyond simply surfacing sources wherein searched entities co-occur. Before I could design a way to better present the results of the data model to users, I needed to understand it myself.
 
 (image: data-understanding.jpg)
@@ -44,6 +48,10 @@ It came as no surprise that the tree routinely intimidated and perplexed users. 
 Furthermore, a hierarchy fundamentally failed to communicate the data accurately. It forced the results into a veritable corporate reporting structure, whereas the actual data model used to find similarity treated all inputs equally throughout the process, comparing them round-robin style. A network or force diagram would more accurately reflect these relationships in the data, while allowing the user to explore their inputs’ relative similarities. A quantitative method like a list could be used to rank the candidates genes based on their similarities to the known genes, and would more directly inform users as to which entities might be worth pursuing further.
 
 (image: force-diagram-prototype.jpg)
+
+
+(text: “There are always, always going to be outliers and errors in our data, that is just the case with big data, but the principle of our analytics is that we try to find the signal that shines through the noise — that is really clear in this visualization, where the outliers and errors are so clearly off to the side.” class: pullquote)
+(text: —IBM data scientist providing feedback on my design concept class: pullquoter)
 
 Our users might need to assess several facets of the data simultaneously, to accurately compare and gain context. My favorite part of designing a data visualization is working out which “visual variables” (as I affectionately and alliteratively call them) to employ together, in order to provide these layers of meaning to the user. Sketching allowed me to quickly explore all sorts of shapes, colors, and other visual aspects that could be layered onto the nodes, thereby conveying multiple attributes of the data simultaneously.
 
@@ -70,6 +78,16 @@ The initial pass with users helped us to narrow down our direction further. I wa
 (gallery: prototypes)
 
 Both renderings had strengths and weaknesses, but in ways that complemented each other: it seemed to me that success might be found by combining the distinct outline afforded by the bubbles with the more economical shape of the words.
+
+To determine the best way for the user to interact with the ranked list of their potential targets, the distance matrix, and the word spectrum acting as its evidence, I sketched out possible layouts and sequencing between all three visualizations, then assessed the pros and cons of each exploration.
+
+(gallery: layout-explorations)
+
+At first, the options I'd sketched up seemed irreconcilable, the cons of one constituting the pros of another. But after examining them more closely, I realized that the best aspects of a couple of my ideas could be combined to solve most of the drawbacks.
+
+(gallery: redlines)
+
+Although the front-end developer on this project was based remotely, I worked as closely with him as I could, setting up several calls throughout my design process to get his input, especially in terms of feasibility. Once my designs were final, I documented every last visual detail as redlines (well, lavender-lines, since pale purple stood out best from the colors in the design, which included red).
 
 ----
 
@@ -101,6 +119,10 @@ A modified butterfly chart accompanies the word spectrum; the user can search fo
 
 (gallery: word-spectrum-in-action)
 
+Once I finish a project I always share my takeaways with others. In this visualization-heavy case, that meant developing and delivering a presentation all about word spectrums for the (link: liaprins/data-vis-guild text: data vis guild I lead within IBM Watson Health popup: yes).
+
+(image: webex.jpg)
+
 Although Predictive Analytics follows a vastly different epistemological model than the traditional, empirical approach to drug discovery, the unique perspective it offers has proven to be helpful. Scientists at Baylor used it along with other WDD tools to validate two p53 kinases<sup> 3</sup> in just two weeks, when the industry average is just one per year, globally. Up to this point, only 28 of these specific proteins had been discovered in the past 35 years. Meanwhile, to quote IBM’s 2016 Annual Report, researchers studying amyotrophic lateral sclerosis (ALS) at Barrow Neurological Institute “employed Watson for Drug Discovery to study nearly 1,500 genes in the human genome, and found five that had never before been associated with ALS.”
 
 (text: <sup>3 </sup>According to the <a href="https://www.ibm.com/blogs/research/2015/10/a-rapid-rate-of-discovery/" target="blank">IBM Research blog </a>“the p53 protein reacts to the detection of genomic problems by increasing the expression of hundreds of other proteins to try and fix these issues, and can even instruct potentially harmful cells to destroy themselves. It gets these calls-to-arms from another set of proteins that chemically modify p53 in response to particular biological conditions.” class: asterisk)
@@ -112,7 +134,7 @@ As such, Watson for Drug Discovery has been mentioned in a number of news articl
 
 ####Press
 
-(link: https://www.pfizer.com/files/investors/financial_reports/annual_reports/2016/ceo-letter/index.html text: Pfizer’s 2016 Annual Report popup: yes)
+(link: https://www.pfizer.com/files/investors/financial_reports/annual_reports/2016/ceo-letter/index.html text: Pfizer’s <!--2016--> Annual Report popup: yes)
 
 (link: http://www.ibtimes.com/here-ibms-blueprint-winning-ai-race-2686752 text: International Business Times: *Here Is IBM’s Blueprint For Winning The AI Race* popup: yes)
 
@@ -130,7 +152,7 @@ As such, Watson for Drug Discovery has been mentioned in a number of news articl
 
 Livelearn: 
 
-- **The layers of complexity intrinsic to this tool**—in the process through which it arrives at results, the inherently different approach it takes to chipping away at the problem of drug discovery, and the specific needs demanded by the user in order for it to produce useful outcomes—**require an equally robust system of education and onboarding**. Currently this is solved in a very unscalable way: individual subject matter experts from IBM work full-time with new and potential clients to bring them up to speed until they can use the tool productively on their own. This inhibits the product within the market, and leaves the end user wholly dependent upon another human being to learn. The educational materials I built for PA aren’t fully fledged enough to support an untrained user, but they have proven to help trained users recall what they’ve already been taught in-person. **This led me to successfully lobby WDD’s offering management and development teams for a more comprehensive, guided onboarding experience over the addition new features, and provided the fodder for my next project on the team.**
+- **The layers of complexity intrinsic to this tool**—in the process through which it arrives at results, the inherently different approach it takes to chipping away at the problem of drug discovery, and the specific needs demanded by the user in order for it to produce useful outcomes—**require an equally robust system of education and onboarding**. Currently this is solved in a very unscalable way: individual subject matter experts from IBM work full-time with new and potential clients to bring them up to speed until they can use the tool productively on their own. This inhibits the product within the market, and leaves the end user wholly dependent upon another human being to learn. The educational materials I built for PA aren’t fully fledged enough to support an untrained user, but they have proven to help trained users recall what they’ve already been taught in-person. **This led me to successfully lobby WDD’s offering management and development teams for a more comprehensive, guided onboarding experience over the addition of new features, and provided the fodder for my next project on the team.**
 
 - Subsequent user testing has revealed the desire for drilling into the evidence of more than just two input entities at a time: users want the ability to select a sub-group of results to see their relative similarity and its reasoning visualized. In hindsight, it seems obvious that limiting the comparison of common terms to just two entities at a time is restrictive. **Even though the current design most accurately reflects Watson’s true data model, I do wonder if a different visualization that accommodates more simultaneous entity selections may have ultimately helped our users to gain a more complete understanding of their inputs’ similarities.**
 

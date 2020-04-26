@@ -1,0 +1,34 @@
+[08-Oct-2018 13:23:53 America/New_York] PHP Fatal error:  Uncaught Exception: Unsupported registry entry type: blueprint in /home/liappkjk/public_html/kirby/kirby/registry.php:84
+Stack trace:
+#0 /home/liappkjk/public_html/kirby/kirby/registry.php(101): Kirby\Registry->entry('blueprint')
+#1 /home/liappkjk/public_html/kirby/kirby.php(143): Kirby\Registry->set('blueprint', 'comments', '/home/liappkjk/...')
+#2 /home/liappkjk/public_html/site/plugins/comments/comments.php(18): Kirby->set('blueprint', 'comments', '/home/liappkjk/...')
+#3 /home/liappkjk/public_html/kirby/kirby.php(461): include_once('/home/liappkjk/...')
+#4 /home/liappkjk/public_html/kirby/kirby.php(431): Kirby->plugin('comments', 'dir')
+#5 /home/liappkjk/public_html/panel/app/src/panel.php(122): Kirby->plugins()
+#6 /home/liappkjk/public_html/panel/index.php(41): Kirby\Panel->__construct(Object(Kirby), '/home/liappkjk/...')
+#7 {main}
+  thrown in /home/liappkjk/public_html/kirby/kirby/registry.php on line 84
+[08-Oct-2018 13:23:53 America/New_York] PHP Fatal error:  Uncaught Exception: Unsupported registry entry type: blueprint in /home/liappkjk/public_html/kirby/kirby/registry.php:84
+Stack trace:
+#0 /home/liappkjk/public_html/kirby/kirby/registry.php(101): Kirby\Registry->entry('blueprint')
+#1 /home/liappkjk/public_html/kirby/kirby.php(143): Kirby\Registry->set('blueprint', 'comments', '/home/liappkjk/...')
+#2 /home/liappkjk/public_html/site/plugins/comments/comments.php(18): Kirby->set('blueprint', 'comments', '/home/liappkjk/...')
+#3 /home/liappkjk/public_html/kirby/kirby.php(461): include_once('/home/liappkjk/...')
+#4 /home/liappkjk/public_html/kirby/kirby.php(431): Kirby->plugin('comments', 'dir')
+#5 /home/liappkjk/public_html/panel/app/src/panel.php(122): Kirby->plugins()
+#6 /home/liappkjk/public_html/panel/index.php(41): Kirby\Panel->__construct(Object(Kirby), '/home/liappkjk/...')
+#7 {main}
+  thrown in /home/liappkjk/public_html/kirby/kirby/registry.php on line 84
+[08-Oct-2018 13:24:08 America/New_York] PHP Fatal error:  Uncaught Exception: Your Toolkit version is too old. Please upgrade to 2.5.12 or newer. in /home/liappkjk/public_html/panel/app/src/panel.php:206
+Stack trace:
+#0 /home/liappkjk/public_html/panel/app/src/panel.php(92): Kirby\Panel->requirements()
+#1 /home/liappkjk/public_html/panel/index.php(41): Kirby\Panel->__construct(Object(Kirby), '/home/liappkjk/...')
+#2 {main}
+  thrown in /home/liappkjk/public_html/panel/app/src/panel.php on line 206
+[08-Oct-2018 13:24:08 America/New_York] PHP Fatal error:  Uncaught Exception: Your Toolkit version is too old. Please upgrade to 2.5.12 or newer. in /home/liappkjk/public_html/panel/app/src/panel.php:206
+Stack trace:
+#0 /home/liappkjk/public_html/panel/app/src/panel.php(92): Kirby\Panel->requirements()
+#1 /home/liappkjk/public_html/panel/index.php(41): Kirby\Panel->__construct(Object(Kirby), '/home/liappkjk/...')
+#2 {main}
+  thrown in /home/liappkjk/public_html/panel/app/src/panel.php on line 206

@@ -2,4 +2,4 @@ Caption: Rather than capping the total compounds permitted to contribute to a ge
 
 ----
 
-Alt: More score visualization sketches, and an illustration of a way to indicate the parts of the chemical structure responsible similar to the user's input.
+Alt: alt
