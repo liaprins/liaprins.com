@@ -2,4 +2,4 @@ Caption: After enrichment, by definition the total score is equal to the amount 
 
 ----
 
-Alt: A diagram of an eight-barred bar chart, explaining how the individual contributions from each contributing compound aggregate into a single score.
+Alt: alt

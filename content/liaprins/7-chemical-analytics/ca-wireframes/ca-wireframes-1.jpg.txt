@@ -2,4 +2,4 @@ Caption: After exploring a number of options around possible UI layouts, I settl
 
 ----
 
-Alt: A wireframe exploration for Chemical Analytics in which all resulting target metadata is organized across rows and columns, and each row can toggle open to view the contributing compounds.
+Alt: alt

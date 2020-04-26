@@ -2,4 +2,4 @@ Caption: Other tools I’d worked on in Watson Health were much more discovery-c
 
 ----
 
-Alt: A wide and shallow figurative IA map for a discovery-oriented workflow on the left end of the spectrum, and a task-oriented figurative IA map on the left, deep, narrow, and generally opposite in shape.
+Alt: 

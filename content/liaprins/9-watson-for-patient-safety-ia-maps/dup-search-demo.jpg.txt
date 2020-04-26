@@ -2,4 +2,4 @@ Caption: In my redesign for the duplicate search flow, Watson would run a search
 
 ----
 
-Alt: A zoomed-in decision tree with color-coded example outputs.
+Alt: alt

@@ -2,4 +2,4 @@ Caption: The prototype was a bare bones UI, just enough of a skeleton to show re
 
 ----
 
-Alt: The prototype built to test the concept internally showed multiple scores: one for each suggested target, and one for each contributing compound (of which there are five per target).
+Alt: 

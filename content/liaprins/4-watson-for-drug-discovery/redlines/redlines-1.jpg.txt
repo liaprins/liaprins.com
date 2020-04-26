@@ -1,0 +1,5 @@
+Caption: I developed a new method by which to supply "redlines" to the FED I worked with; I grouped together all related specifications, rather than applying all spec types (color, spacing, sizing, typography, etc) in one place. This was based on my own in-depth understanding of CSS and its classes: the project's front-end dev could create a class for each style I described, and simply apply it as needed across the UI.
+
+----
+
+Alt: Colors of the candidate, known, and validation entities as redlines.

@@ -1,0 +1,5 @@
+Caption: I used two overlapping grids to account for both imagery (the aqua lines) and body copy (a purple box offset to the left).
+
+----
+
+Alt: Three screens with their grids overlaid.

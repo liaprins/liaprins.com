@@ -2,4 +2,4 @@ Caption: Visually, enrichment is akin to moving the “0” end of the scoring s
 
 ----
 
-Alt: A diagram centered around a single bar from a bar chart, explaining how enrichment affects each contributing compound's output score.
+Alt: alt

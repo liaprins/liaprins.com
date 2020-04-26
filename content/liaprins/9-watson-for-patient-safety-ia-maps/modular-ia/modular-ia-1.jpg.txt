@@ -2,4 +2,4 @@ Caption: Each pink box within the master map indicates a more detailed map waiti
 
 ----
 
-Alt: My modularized IA map on the left, with a pink box indicating an area that is magnified on the right to show more details and decision trees of its own.
+Alt: alt

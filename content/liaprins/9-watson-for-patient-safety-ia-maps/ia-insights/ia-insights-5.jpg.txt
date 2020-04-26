@@ -2,7 +2,7 @@ Caption:
 
 ----
 
-Alt: 
+Alt: "When to make an IA map? ... ideally plan the information hierarchy before the screens and wireframes continue to iterate deeper on parts from a user’s perspective: how they would flow through the system." This is illustrated by two IA maps: one from before the eGreetings website was fully fleshed out in terms of design, and one from afterwards, to demonstrate changes in direction and growth of detail.
 
 ----
 

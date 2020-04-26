@@ -2,4 +2,4 @@ Caption: Occasionally, these detailed maps link to an even deeper level of detai
 
 ----
 
-Alt: The same zoomed-in detail from the previous image, with its own pink boxes to indicate more details with their own zoomed-in flows on the right.
+Alt: alt

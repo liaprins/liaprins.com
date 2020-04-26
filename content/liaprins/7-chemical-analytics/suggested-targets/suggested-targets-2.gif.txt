@@ -2,4 +2,4 @@ Caption: The other rows can easily all be opened or closed simultaneously, depen
 
 ----
 
-Alt: An animated .GIF demonstrating the ability to toggle open or closed all rows via a master switch.
+Alt: alt

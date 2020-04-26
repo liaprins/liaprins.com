@@ -1,0 +1,95 @@
+[15-Jan-2018 01:30:02 UTC] PHP Fatal error:  Can't use method return value in write context in /home/liappkjk/public_html/site/plugins/responsive-images.php on line 98
+[15-Jan-2018 01:32:03 UTC] PHP Fatal error:  Can't use method return value in write context in /home/liappkjk/public_html/site/plugins/responsive-images.php on line 98
+[15-Jan-2018 01:34:31 UTC] PHP Fatal error:  Can't use method return value in write context in /home/liappkjk/public_html/site/plugins/responsive-images.php on line 98
+[15-Jan-2018 01:35:29 UTC] PHP Fatal error:  Can't use method return value in write context in /home/liappkjk/public_html/site/plugins/responsive-images.php on line 98
+[25-Jul-2018 16:26:17 UTC] PHP Warning:  Uncaught exception 'Whoops\Exception\ErrorException' with message 'Undefined variable: metacaption' in /home/liappkjk/public_html/site/tags/tags.php:164
+Stack trace:
+#0 /home/liappkjk/public_html/site/tags/tags.php(164): Whoops\Run->handleError(8, 'Undefined varia...', '/home/liappkjk/...', 164, Array)
+#1 [internal function]: KirbytextAbstract::{closure}(Object(Kirbytag))
+#2 /home/liappkjk/public_html/kirby/core/kirbytag.php(165): call_user_func_array(Object(Closure), Array)
+#3 /home/liappkjk/public_html/kirby/core/kirbytext.php(77): KirbytagAbstract->html()
+#4 [internal function]: KirbytextAbstract->tag(Array)
+#5 /home/liappkjk/public_html/kirby/core/kirbytext.php(49): preg_replace_callback('!(?=[^\\]])\\([a-...', Array, '- **I wish I ha...')
+#6 /home/liappkjk/public_html/kirby/core/kirbytext.php(101): KirbytextAbstract->parse()
+#7 /home/liappkjk/public_html/kirby/helpers.php(64): KirbytextAbstract->__toString()
+#8 /home/liappkjk/public_html/kirby/extensions/methods.php(44): kirbytext(Object(Field))
+#9 [inte in /home/liappkjk/public_html/site/tags/tags.php on line 164
+[25-Jul-2018 16:26:17 UTC] PHP Fatal error:  Call to a member function empty() on a non-object in /home/liappkjk/public_html/site/tags/tags.php on line 164
+[25-Jul-2018 16:27:04 UTC] PHP Warning:  Uncaught exception 'Whoops\Exception\ErrorException' with message 'Undefined variable: metacaption' in /home/liappkjk/public_html/site/tags/tags.php:164
+Stack trace:
+#0 /home/liappkjk/public_html/site/tags/tags.php(164): Whoops\Run->handleError(8, 'Undefined varia...', '/home/liappkjk/...', 164, Array)
+#1 [internal function]: KirbytextAbstract::{closure}(Object(Kirbytag))
+#2 /home/liappkjk/public_html/kirby/core/kirbytag.php(165): call_user_func_array(Object(Closure), Array)
+#3 /home/liappkjk/public_html/kirby/core/kirbytext.php(77): KirbytagAbstract->html()
+#4 [internal function]: KirbytextAbstract->tag(Array)
+#5 /home/liappkjk/public_html/kirby/core/kirbytext.php(49): preg_replace_callback('!(?=[^\\]])\\([a-...', Array, '- **I wish I ha...')
+#6 /home/liappkjk/public_html/kirby/core/kirbytext.php(101): KirbytextAbstract->parse()
+#7 /home/liappkjk/public_html/kirby/helpers.php(64): KirbytextAbstract->__toString()
+#8 /home/liappkjk/public_html/kirby/extensions/methods.php(44): kirbytext(Object(Field))
+#9 [inte in /home/liappkjk/public_html/site/tags/tags.php on line 164
+[25-Jul-2018 16:27:04 UTC] PHP Fatal error:  Call to a member function empty() on a non-object in /home/liappkjk/public_html/site/tags/tags.php on line 164
+[25-Jul-2018 16:29:33 UTC] PHP Warning:  Uncaught exception 'Whoops\Exception\ErrorException' with message 'Undefined variable: metacaption' in /home/liappkjk/public_html/site/tags/tags.php:164
+Stack trace:
+#0 /home/liappkjk/public_html/site/tags/tags.php(164): Whoops\Run->handleError(8, 'Undefined varia...', '/home/liappkjk/...', 164, Array)
+#1 [internal function]: KirbytextAbstract::{closure}(Object(Kirbytag))
+#2 /home/liappkjk/public_html/kirby/core/kirbytag.php(165): call_user_func_array(Object(Closure), Array)
+#3 /home/liappkjk/public_html/kirby/core/kirbytext.php(77): KirbytagAbstract->html()
+#4 [internal function]: KirbytextAbstract->tag(Array)
+#5 /home/liappkjk/public_html/kirby/core/kirbytext.php(49): preg_replace_callback('!(?=[^\\]])\\([a-...', Array, '- **I wish I ha...')
+#6 /home/liappkjk/public_html/kirby/core/kirbytext.php(101): KirbytextAbstract->parse()
+#7 /home/liappkjk/public_html/kirby/helpers.php(64): KirbytextAbstract->__toString()
+#8 /home/liappkjk/public_html/kirby/extensions/methods.php(44): kirbytext(Object(Field))
+#9 [inte in /home/liappkjk/public_html/site/tags/tags.php on line 164
+[25-Jul-2018 16:29:33 UTC] PHP Fatal error:  Call to a member function empty() on a non-object in /home/liappkjk/public_html/site/tags/tags.php on line 164
+[25-Jul-2018 16:29:35 UTC] PHP Warning:  Uncaught exception 'Whoops\Exception\ErrorException' with message 'Undefined variable: metacaption' in /home/liappkjk/public_html/site/tags/tags.php:164
+Stack trace:
+#0 /home/liappkjk/public_html/site/tags/tags.php(164): Whoops\Run->handleError(8, 'Undefined varia...', '/home/liappkjk/...', 164, Array)
+#1 [internal function]: KirbytextAbstract::{closure}(Object(Kirbytag))
+#2 /home/liappkjk/public_html/kirby/core/kirbytag.php(165): call_user_func_array(Object(Closure), Array)
+#3 /home/liappkjk/public_html/kirby/core/kirbytext.php(77): KirbytagAbstract->html()
+#4 [internal function]: KirbytextAbstract->tag(Array)
+#5 /home/liappkjk/public_html/kirby/core/kirbytext.php(49): preg_replace_callback('!(?=[^\\]])\\([a-...', Array, '- **I wish I ha...')
+#6 /home/liappkjk/public_html/kirby/core/kirbytext.php(101): KirbytextAbstract->parse()
+#7 /home/liappkjk/public_html/kirby/helpers.php(64): KirbytextAbstract->__toString()
+#8 /home/liappkjk/public_html/kirby/extensions/methods.php(44): kirbytext(Object(Field))
+#9 [inte in /home/liappkjk/public_html/site/tags/tags.php on line 164
+[25-Jul-2018 16:29:35 UTC] PHP Fatal error:  Call to a member function empty() on a non-object in /home/liappkjk/public_html/site/tags/tags.php on line 164
+[25-Jul-2018 16:29:45 UTC] PHP Warning:  Uncaught exception 'Whoops\Exception\ErrorException' with message 'Undefined variable: metacaption' in /home/liappkjk/public_html/site/tags/tags.php:164
+Stack trace:
+#0 /home/liappkjk/public_html/site/tags/tags.php(164): Whoops\Run->handleError(8, 'Undefined varia...', '/home/liappkjk/...', 164, Array)
+#1 [internal function]: KirbytextAbstract::{closure}(Object(Kirbytag))
+#2 /home/liappkjk/public_html/kirby/core/kirbytag.php(165): call_user_func_array(Object(Closure), Array)
+#3 /home/liappkjk/public_html/kirby/core/kirbytext.php(77): KirbytagAbstract->html()
+#4 [internal function]: KirbytextAbstract->tag(Array)
+#5 /home/liappkjk/public_html/kirby/core/kirbytext.php(49): preg_replace_callback('!(?=[^\\]])\\([a-...', Array, '- **I wish I ha...')
+#6 /home/liappkjk/public_html/kirby/core/kirbytext.php(101): KirbytextAbstract->parse()
+#7 /home/liappkjk/public_html/kirby/helpers.php(64): KirbytextAbstract->__toString()
+#8 /home/liappkjk/public_html/kirby/extensions/methods.php(44): kirbytext(Object(Field))
+#9 [inte in /home/liappkjk/public_html/site/tags/tags.php on line 164
+[25-Jul-2018 16:29:45 UTC] PHP Fatal error:  Call to a member function empty() on a non-object in /home/liappkjk/public_html/site/tags/tags.php on line 164
+[25-Jul-2018 16:37:22 UTC] PHP Warning:  Uncaught exception 'Whoops\Exception\ErrorException' with message 'Undefined variable: metacaption' in /home/liappkjk/public_html/site/tags/tags.php:164
+Stack trace:
+#0 /home/liappkjk/public_html/site/tags/tags.php(164): Whoops\Run->handleError(8, 'Undefined varia...', '/home/liappkjk/...', 164, Array)
+#1 [internal function]: KirbytextAbstract::{closure}(Object(Kirbytag))
+#2 /home/liappkjk/public_html/kirby/core/kirbytag.php(165): call_user_func_array(Object(Closure), Array)
+#3 /home/liappkjk/public_html/kirby/core/kirbytext.php(77): KirbytagAbstract->html()
+#4 [internal function]: KirbytextAbstract->tag(Array)
+#5 /home/liappkjk/public_html/kirby/core/kirbytext.php(49): preg_replace_callback('!(?=[^\\]])\\([a-...', Array, '- **I wish I ha...')
+#6 /home/liappkjk/public_html/kirby/core/kirbytext.php(101): KirbytextAbstract->parse()
+#7 /home/liappkjk/public_html/kirby/helpers.php(64): KirbytextAbstract->__toString()
+#8 /home/liappkjk/public_html/kirby/extensions/methods.php(44): kirbytext(Object(Field))
+#9 [inte in /home/liappkjk/public_html/site/tags/tags.php on line 164
+[25-Jul-2018 16:37:22 UTC] PHP Fatal error:  Call to a member function empty() on a non-object in /home/liappkjk/public_html/site/tags/tags.php on line 164
+[25-Jul-2018 16:37:40 UTC] PHP Warning:  Uncaught exception 'Whoops\Exception\ErrorException' with message 'Undefined variable: metacaption' in /home/liappkjk/public_html/site/tags/tags.php:164
+Stack trace:
+#0 /home/liappkjk/public_html/site/tags/tags.php(164): Whoops\Run->handleError(8, 'Undefined varia...', '/home/liappkjk/...', 164, Array)
+#1 [internal function]: KirbytextAbstract::{closure}(Object(Kirbytag))
+#2 /home/liappkjk/public_html/kirby/core/kirbytag.php(165): call_user_func_array(Object(Closure), Array)
+#3 /home/liappkjk/public_html/kirby/core/kirbytext.php(77): KirbytagAbstract->html()
+#4 [internal function]: KirbytextAbstract->tag(Array)
+#5 /home/liappkjk/public_html/kirby/core/kirbytext.php(49): preg_replace_callback('!(?=[^\\]])\\([a-...', Array, '- **I wish I ha...')
+#6 /home/liappkjk/public_html/kirby/core/kirbytext.php(101): KirbytextAbstract->parse()
+#7 /home/liappkjk/public_html/kirby/helpers.php(64): KirbytextAbstract->__toString()
+#8 /home/liappkjk/public_html/kirby/extensions/methods.php(44): kirbytext(Object(Field))
+#9 [inte in /home/liappkjk/public_html/site/tags/tags.php on line 164
+[25-Jul-2018 16:37:40 UTC] PHP Fatal error:  Call to a member function empty() on a non-object in /home/liappkjk/public_html/site/tags/tags.php on line 164

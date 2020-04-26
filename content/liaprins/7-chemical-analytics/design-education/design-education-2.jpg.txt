@@ -2,4 +2,4 @@ Caption:
 
 ----
 
-Alt: The same network visualization shows callouts from the genes in the previously highlighted links, connecting them to their listed counterparts in a table view of the same data.
+Alt: 

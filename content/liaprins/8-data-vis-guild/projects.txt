@@ -58,7 +58,7 @@ I also arranged for other Watson Health teams to present, whose products include
 
 (image: mural-template.jpg)
 
-IBM’s Design Language team had begun work on a set of guidelines to help designers more effectively communicate and visualize aggregate data, calling on Accurat—a design firm specializing in data vis—as consultants. I met with Accurat team member and renowned data vis designer Giorgia Lupi a number of times to share real use cases and act as an ambassador of the AI and healthcare product spaces. The principles that went into our company’s data vis guidelines needed to account for the complexity that our design teams and our users dealt with daily.
+IBM’s Design Language team had begun work on a set of guidelines to help designers more effectively communicate and visualize aggregate data, calling on Accurat—a design firm specializing in data vis—as consultants. I met with Accurat team member and renowned data vis designer Giorgia Lupi and others to share real use cases and act as an ambassador of the AI and healthcare product spaces. The principles that went into our company’s data vis guidelines needed to account for the complexity that our design teams and our users dealt with daily.
 
 (image: ibm-guidelines.jpg)
 

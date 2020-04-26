@@ -29,6 +29,7 @@ of the system, please check out http://getkirby.com/docs/advanced/options
 */
 
 /* Make liaprins.com go straight to the main page, instead of liaprins.com/liaprins */
+
 c::set('home','liaprins');
 
 c::set('routes', array(
@@ -52,7 +53,6 @@ c::set('routes', array(
     }
   )
 ));
-
 
 
 
