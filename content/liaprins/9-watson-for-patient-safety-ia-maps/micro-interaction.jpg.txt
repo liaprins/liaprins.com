@@ -1,5 +1,0 @@
-Caption: The act of saving changes to a report is an important aspect of case processing, since it deals with edits to personal health information. As a designer, I needed to ensure that our developers would replicate this important aspect of the interaction experience exactly, so I grew my IA map to include micro-interactions like this, indicating where every possible outcomes leads.
-
-----
-
-Alt: alt

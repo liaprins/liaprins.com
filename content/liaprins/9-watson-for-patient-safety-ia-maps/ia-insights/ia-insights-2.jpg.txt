@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: "Intro to I.A. ... What is the practice of information architecture? ... “A design discipline focused on making information findable and understandable.” — O’Reilly’s Information Architecture ... “Label and organize information environments to help users find and recall their content with ease.” — IBM Design Language’s Interaction + Information architecture page ... It includes designing the way the information is structured as well as the way-finding and navigation through that information."
-
-----
-
-Sort: 2

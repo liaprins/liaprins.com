@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: "What should an IA map accomplish? Why make it? ... use it to communicate to developers and other designers the relationship between the designed “chunks”  helpful for keeping things straight as you design complex systems: get the system’s holistic organization out of your brain and into a physical visualization." There’s also an example IA map from the IBM Watson Analytics redesign.
-
-----
-
-Sort: 4

@@ -1,5 +1,0 @@
-Caption: An existing network visualization within WDD allows users to explore even more potential targets: it will surface the known relationships (as found in scientific literature and parsed with NLP) between a user's original input in CA, the compounds similar to it and known to be related to the suggested targets, and any additional gene targets found to be related to any of the above.
-
-----
-
-Alt: alt

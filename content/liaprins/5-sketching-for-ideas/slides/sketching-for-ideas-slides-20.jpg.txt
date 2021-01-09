@@ -1,9 +1,0 @@
-Caption: Starting with a blank slate keeps you from taking any previous designs for granted; everything you include is there for a reason.
-
-----
-
-Alt: "Making by hand forces you to consider all details and interactions involved. Coping and pasting templates digitally can mean you miss opportunities in the details, or take existing interactions for granted." With another exploratory UI sketch.
-
-----
-
-Sort: 20

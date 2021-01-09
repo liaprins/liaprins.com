@@ -1,5 +1,0 @@
-Caption: Visually, enrichment is akin to moving the “0” end of the scoring spectrum up to the level of the minimum similarity threshold, without scaling the compounds’ original similarity scores along with it.
-
-----
-
-Alt: alt

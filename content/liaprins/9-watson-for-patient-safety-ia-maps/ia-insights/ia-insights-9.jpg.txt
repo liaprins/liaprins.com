@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: "Traditional technical “process charts” or “system flows” use specific shapes to convey certain meanings." Ovals indicate beginnings and ends, rhombi inputs, rectangles a process step, diamonds are decision points, and rhombi in the opposite direction are outputs.
-
-----
-
-Sort: 9

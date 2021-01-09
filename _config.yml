@@ -1,0 +1,26 @@
+port: 5000
+destination: ./docs
+title: Lia Prins
+description: I create and code to inspire a curiosity and enable an understanding of the natural world.
+permalink: /:slug
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+name: "Lia Prins"
+short_name: "LP"
+url: "https://liaprins.com"
+language: "en"
+lang_direction: "ltr"
+color: "#ffffff"
+timezone: America/Los_Angeles

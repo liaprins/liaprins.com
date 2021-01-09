@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: "Examples + techniques: encoding ... I start by listing all the “layers of meaning” that I want to convey ... Is the user or is the system/technology responsible for this part? Does the user need to go down this path to complete their task, or is it optional? If multiple users/roles, which one(s) will be using which parts?"
-
-----
-
-Sort: 8

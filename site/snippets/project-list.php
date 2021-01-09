@@ -1,1 +1,0 @@
-<?php if($thumbnail = $project->thumbnail()->toFile()): ?><div class=projecttile style="background-image:url(<?= $thumbnail->url() ?>)"><a href="<?php echo $project->url() ?>"><img alt=About class=aboutproject src="<?php echo url($site . 'assets/images/+white.svg')?>"><h6><?php echo $project->title()->kirbytext() ?></h6></a></div><?php endif; ?>

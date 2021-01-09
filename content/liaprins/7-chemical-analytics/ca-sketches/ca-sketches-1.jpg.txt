@@ -1,5 +1,0 @@
-Caption: Two predicted targets could share the same score (which also meant they'd tie for rank), but arrive at it in different ways: on one end of the spectrum, a single highly-similar compound could have contributed a great deal to the total score, with few to no other contributors; conversely, the same score could come from many more moderately similar compounds. I felt it was imperative to visualize the score in a way that shed light on this and showed the breakdown of score contributions for each result. I explored putting the total count of contributors along the y-axis and the similarity score contributed by each on the x-axis (left sketches). A pizza slice analogy occurred to me in early iteration: the whole pizza would be divided evenly by the number of compounds <em>allowed</em> to contribute (a setting that I proposed the user would have control over); then each slice would grow towards the edge in accordance with the score contributed.
-
-----
-
-Alt: alt

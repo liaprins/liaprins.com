@@ -1,5 +1,0 @@
-Caption: A user can change the minimum similarity threshold, which changes which compounds are available to contribute to any prediction. This in turn can mean the results themselves change, and almost certainly that their scores change as well.
-
-----
-
-Alt: alt
