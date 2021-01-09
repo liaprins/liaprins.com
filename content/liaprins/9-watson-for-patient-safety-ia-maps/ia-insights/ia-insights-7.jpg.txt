@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: "What do we know about this shape?" A yellow diamond is shown with a dashed border, along with a key. Deductively between the shape and the key, it can be seen to have been done by User A, a human, and it's an optional step.
-
-----
-
-Sort: 7

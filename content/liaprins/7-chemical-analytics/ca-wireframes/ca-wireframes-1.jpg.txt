@@ -1,5 +1,0 @@
-Caption: After exploring a number of options around possible UI layouts, I settled on these two and built them out with real data I'd gathered from the prototype, so I could consult the front-end developer I was working with. I definitely wanted to include the chemical structure for each compound contributing to the predicted gene's score so that user's could see the physical similarity between them and their input chemical, especially since the score was based on structural similarity. I also highlighted the sub-structures in common with the user's input, as those regions would have been responsible for the compound's similarity score.
-
-----
-
-Alt: alt

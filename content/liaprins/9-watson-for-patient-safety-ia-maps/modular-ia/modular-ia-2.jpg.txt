@@ -1,5 +1,0 @@
-Caption: Occasionally, these detailed maps link to an even deeper level of detail themselves. For example, the "save" map is referenced many places in both the master and more detailed maps.
-
-----
-
-Alt: alt

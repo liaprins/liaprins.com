@@ -1,5 +1,0 @@
-Caption: Although I'd worked hard to make my original IA map readable, it was just too detailed. The overhaul removed the detail into separate maps, allowing the master map to function as a higher-level overview.
-
-----
-
-Alt: alt

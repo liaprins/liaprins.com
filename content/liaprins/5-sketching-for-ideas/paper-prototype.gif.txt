@@ -1,5 +1,0 @@
-Caption: I built a quick paper prototype out of Post-its to explore a couple distinct mindsets to approaching the way an expanding panel within a UI interacted with the existing content: it could <em>cover</em> the content like a window shade—existing on a plane above, or it could live on the same level as the rest of the content and effectively push it down. I explored what these physical metaphors meant with tactile pieces of paper, making it easier for others to understand when I communicated these two options. It was helpful to explore both analogies in the context of the <em>types</em> of content the panel would apply to, as well—one was simply scrolling lists, while the other was a network diagram that could be panned and zoomed. To me, it didn't make sense for the panel to push down anything but scrollable content, but the window shade metaphor suited either content type equally well. The tangible prototype helped me to visualize my reasoning for this as well.
-
-----
-
-Alt: An animated .GIF that makes use of stop-motion to show the parts and pieces of my paper prototype moving in the ways a user would interact with it.

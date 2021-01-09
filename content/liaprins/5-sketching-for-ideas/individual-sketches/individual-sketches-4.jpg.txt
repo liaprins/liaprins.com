@@ -1,5 +1,0 @@
-Caption: Here I used color to communicate the parts of the back-end flow (on the left) that affect the front-end interface (on the right).
-
-----
-
-Alt: The left sketch diagrams a back-end authentication flow, color-coded with blue, pink, and yellow highlighters. The right sketch maps those colors to a UI to indicate which parts of the back-end flow, data, and APIs affect which parts of the UI.

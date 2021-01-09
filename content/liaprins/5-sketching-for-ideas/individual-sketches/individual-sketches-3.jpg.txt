@@ -1,5 +1,0 @@
-Caption: I use color to clarify and create consistency so comparison is easy. Regardless of the shape taken by each instance of the visualization in this sketch, the ones with greater total area equate to a higher score. However, dual-encoding each dimension with a unique color makes it easier to compare instances.
-
-----
-
-Alt: A sketch with showing three dimensions of various genes as a radar chart.

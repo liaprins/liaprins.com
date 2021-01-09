@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: "Consider semantic interpretation of visual variables ... A dashed line intuitively indicates the concept of optional ... While a solid line conveys more certainty"
-
-----
-
-Sort: 10

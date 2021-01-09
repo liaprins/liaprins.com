@@ -1,9 +1,0 @@
-Caption: 
-
-I built a short series of conceptual illustrations walking new users through the technological processes that go on behind the screen, drawing upon sketches I had made for my own sake in an earlier effort to understand the data model myself. 
-<p class="figcaptionspacer"></p>
-The single front-end developer assigned to WDD ended up not having time to implement a carousel, so it didn't make it into the product. These are from a mid-fidelity draft I made around my concept.
-
-----
-
-Alt: A circle of all inputs shows arrows linking each, round-robin style, with the same input nodes shown in the resulting force diagram nearby.

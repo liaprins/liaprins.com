@@ -1,5 +1,0 @@
-Caption: I planned to have a simplified eyeglasses icon represent each blog post on the home page, the lenses of which I’d fill with imagery alluding to the post’s content. Hovering would trigger one of two possible a zoom effects. But when I couldn’t decide which one to use, I built a quick prototype in code, shot a screen capture video, and consulted my Instagram followers for feedback.
-
-----
-
-Alt: This is a video illustrating my prototype in action, wherein the first hover state zooms into the center of each lens of my glasses icon independently, and the second option zooms into the center of the glasses as a whole.

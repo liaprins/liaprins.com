@@ -1,5 +1,0 @@
-Caption: The known targets tab in CA is just a list version of all gene targets known to be related to the users input. It can also be visualized as a network, though, with the input chemical at the center, connected by definition to all resulting genes in the list.
-
-----
-
-Alt: alt

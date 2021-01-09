@@ -1,5 +1,0 @@
-Caption: It was tricky, but I programmed this page so that I can continuously add more entries via my CMS as they pop into my mind. The question will then be automatically placed onto one of the parallax layers and the page as whole will lengthen accordingly. I used PHP to randomize each pair of binoculars’ margins so the page layout looks more organic. A long series of JavaScript if-statements carefully position the opened question boxes, preventing them from extending off the page.
-
-----
-
-Alt: An assortment of binoculars with images filling their lenses are parallax-scrolled. Two are clicked on, opening text boxes containing questions that I plan to investigate.

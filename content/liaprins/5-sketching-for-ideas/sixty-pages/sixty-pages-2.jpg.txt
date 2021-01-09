@@ -1,5 +1,0 @@
-Caption: A user might only need to be alerted about their mobile app's usage when a certain <em>combination</em> of metrics met given criteria. They might also want to account for known lulls or expected spikes on weekends or evening hours. I developed a number of ideas to accommodate these specifications and documented them as quick sketches.
-
-----
-
-Alt: A sample of a few sketches from the 72 sheets in close-up.

@@ -1,9 +1,0 @@
-Caption: An idea presented as a sketch is easy to provide input on: the format focuses feedback around the <em>concept</em> rather than the details. Furthermore, the fact that sketches aren't huge investments helps others to feel more open to suggest ways in which the idea could change or grow.
-
-----
-
-Alt: "Sketches are easier to critique, because they're not set in stone. This encourages others to grow your ideas further." Shown by small UI sketches within wonkily drawn boxes.
-
-----
-
-Sort: 22

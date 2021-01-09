@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: "“Visual variables” can be layered to convey multiple meanings at once." Shapes shown include a circle, square, and diamond; colors shown are yellow, green, and blue. Borders shown have varying weights, and another set have varying dash-lengths.
-
-----
-
-Sort: 6

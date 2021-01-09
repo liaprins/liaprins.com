@@ -1,5 +1,0 @@
-Caption: Each pink box within the master map indicates a more detailed map waiting to be drilled into for a deeper view.
-
-----
-
-Alt: alt
