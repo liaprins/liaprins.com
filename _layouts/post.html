@@ -1,5 +1,187 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <!-- Google Analytics -->
+  {% if jekyll.environment == "production" %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124233327-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-124233327-1');
+    </script>
+  {% endif %}
 
-{{ content }}
+    <!-- For PWA; also need serviceworker.js to be in the root of the site -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        if (navigator.serviceWorker.controller) {
+          console.log("An active service worker found, no need to register");
+        } else {
+          // Register the service worker
+          navigator.serviceWorker
+          .register("{{ site.baseurl }}/serviceworker.js", {
+            scope: "./"
+          })
+          .then(function (reg) {
+            console.log("Service worker has been registered for scope: " + reg.scope);
+          });
+        }
+      }
+    </script>
+
+    <meta charset=UTF-8 />
+    <meta name=viewport                   content="width=device-width,initial-scale=1">
+    <meta property=og:url                 content="https://liaprins.com{{ page.url }}" />
+    <meta property=og:site_name           content="{{ site.title }}" />
+    <meta property=og:title               content="{{ site.title }}" />
+    <meta property=og:description         content="{{ site.description }} | {{ page.overview }}" />
+    <meta property=og:image               content="{{ site.baseurl }}assets/images/sitewide/lia.jpg" />
+    <meta property=og:type                content="website">
+    <meta name=description                content="{{ site.description }} | {{ page.overview }}">
+    <meta name=keywords                   content=data,visualization,design,ux,visual,research,curiosity,curious,science,communication,write,create,thinking,investigate,biology,thinking,investigate,migratory,birds,lift,flight,lunar>
+    <meta name=msapplication-TileColor    content=#da532c>
+    <meta name=theme-color                content=#ffffff>
+    <link href=/site.webmanifest rel=manifest>
+    <link href=/safari-pinned-tab.svg rel=mask-icon color=#5bbad5>
+    <link href=/apple-touch-icon.png rel=apple-touch-icon sizes=180x180>
+    <link href=/favicon-32x32.png rel=icon sizes=32x32 type=image/png>
+    <link href=/favicon-16x16.png rel=icon sizes=16x16 type=image/png>
+
+    <title>
+      {{ site.title }}
+    </title>
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/reset.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/fonts.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/text-w-mediaqueries.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/mediaqueries.css">
+
+  </head>
+
+  <body>
+
+    <script src="assets/js/pop.js">
+    </script>
+
+    <script src="assets/js/lightboxslideshow.js">
+    </script>
+
+    <script src="assets/js/pure-swipe.js">
+    </script>
+
+    <div id="bodysub">
+        <a href="{{ site.baseurl }}">
+            <img src="{{ site.baseurl }}assets/images/sitewide/back.svg" alt="Back to all projects" id="back">
+        </a>
+        <h1>
+            {{ page.title }}
+        </h1>
+
+        <ul id="menu">
+
+            {% if page.content contains 'Opportunities' %}
+            <a href="#opportunities">
+                <li class="menuitem">Opportunities</li>
+            </a>
+            {% endif %}
+
+            {% if page.content contains 'Process' %}
+            <a href="#process">
+                <li class="menuitem">Process</li>
+            </a>
+            {% endif %}
+
+            {% if page.content contains 'Outcomes' %}
+            <a href="#outcomes">
+                <li class="menuitem">Outcomes</li>
+            </a>
+            {% endif %}
+
+            {% if page.content contains 'Live + learn' %}
+            <a href="#livelearn">
+                <li class="menuitem">Live + learn</li>
+            </a>
+            {% endif %}
+
+        </ul>
+
+        <div id="intro">
+            {{ page.excerpt }}
+        </div>
+
+
+        <!-- TESTING PROJECT STATS SECTION -->
+        <div id="stats">
+
+            {% if page.landing-page %}
+              <strong>Landing page: </strong>{{ page.landing-page }}
+            {% endif %}
+
+            {% if page.project-pretext %}
+              <strong>Project pretext: </strong>{{ page.project-pretext }}
+            {% endif %}
+
+            {% if page.objective %}
+              <strong>Objective: </strong>{{ page.objective }}
+            {% endif %}
+
+            {% if page.timeframe %}
+              <strong>Timeframe: </strong>{{ page.timeframe }}
+            {% endif %}
+
+            {% if page.target-audience %}
+              <strong>Target audience: </strong>{{ page.target-audience }}
+            {% endif %}
+
+            {% if page.target-users %}
+              <strong>Target users: </strong>{{ page.target-users }}
+            {% endif %}
+
+            {% if page.role %}
+              <strong>Role: </strong>{{ page.role }}
+            {% endif %}
+
+            {% if page.team-members %}
+              <strong>Additional team members: </strong>{{ page.team-members }}
+            {% endif %}
+
+            {% if page.output-channels %}
+              <strong>Output channels: </strong>{{ page.output-channels }}
+            {% endif %}
+
+            {% if page.guild-members %}
+              <strong>Guild members: </strong>{{ page.guild-members }}
+            {% endif %}
+
+        </div>
+
+<!-- ******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************** -->
+
+        {{ content }}
+
+<!-- ******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************** -->
+
+        <hr id="gridseparator">
+
+        <div>
+        {% for post in site.posts %}
+          <div class=projecttile style="background-image:url({{ site.baseurl }}assets/images/projects/{{ post.slug }}/{{ post.thumb }})">
+            <a href="{{ site.baseurl }}{{ post.url }}">
+              <img alt=About class=aboutproject src="{{ site.baseurl }}assets/images/sitewide/+white.svg">
+              <h6>
+                {{ post.title }}
+              </h6>
+            </a>
+          </div>
+        {% endfor %}
+        </div>
+
+        <div id="bottomspacer">
+        </div>
+
+      </div>    <!-- closing id="bodysub" -->
+
+    </body>
+</html>
