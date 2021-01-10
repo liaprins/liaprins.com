@@ -1,0 +1,9 @@
+<figure>
+  <img src="{{ site.baseurl }}/assets/images/projects{{ page.url }}/{{ include.image }}" {% if include.caption %}alt="{{ include.alt }}"{% endif %} class="contentimage singleimage clickme">
+{% if include.caption %}
+  <figcaption class="s-textface">
+    <hr class="toprule">
+    {{ include.caption }}
+  </figcaption>
+{% endif %}
+</figure>

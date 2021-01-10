@@ -1,0 +1,130 @@
+---
+layout: post
+title: Worldly Birds
+thumb: worldly-birds.jpg
+intro: The annual traversing of the globe by millions of migratory birds—often from one hemisphere to the other and back again—is one of the coolest and craziest feats of nature, putting our planet into perspective from an ecological point of view. But as a human down on the ground, the magnitude of this instinct-driven undertaking is truly incomprehensible; spotting a few flocks of geese overhead as they fly south in the fall doesn’t do it justice. <strong>I’d need to visualize these yearly mass migrations if I were to gain and share a more comprehensive, gravity-defying appreciation of these amazing animals.</strong> Cue <a href="https://processing.org/" target="_blank">Processing</a>, a Java-based prototyping language made especially for visualizing data and making it interactive.
+project-pretext: Academic
+objective: Create an interactive digital data visualization
+timeframe: 5 weeks
+---
+
+{% include section.html sectionname="Opportunities" id="opportunities" %}
+
+  <ul>
+    <li>
+      <strong>Visually, I needed to account for a number of variables.</strong> At minimum: time over a year, location on the earth, and bird species.
+    </li>
+    <li>
+      I didn’t want to visualize migration patterns that had already been identified and distilled into cleaned-up models: this would be substituting a second-hand proxy for real migration events. So <strong>I’d have to find trustable data representing real birds, and plenty of it.</strong>
+    </li>
+    <li>
+      <strong>I’d never yet used Processing</strong> or any coding language like it, but it was the perfect tool for the job, so I’d have to learn it from scratch.
+    </li>
+  </ul>
+
+{% include sectionclose.html %}
+
+{% include section.html sectionname="Process" id="process" %}
+
+  <p>
+    To learn how to use Processing, I built small “sketches”: Processing-speak for small, quickly made modules exploring single concepts. Each examined a different functionality available through the Processing language, such as random motion, counting, and click-functionality.
+  </p>
+
+  {% include image.html image="practice.gif" alt="alt" caption="The first sketch illustrates the number 99 by generating a random number between 1 and 99. Once converted from float to integer, if the random number is less than 99, the background color will remain the same, but if it <em>is</em> the integer 99, the background will change to a randomly generated color. I coded the sketch to run at a frame rate of 99 refreshes per second, so theoretically, the background should change about once per second.<p class='figcaptionspacer'></p>The middle sketch is a timer counting down until the end of finals week at UW. Portraits of my various finals-week-related emotions flash semi-randomly&#58; as the timer fills with “sand” the chances that a panic-stricken portrait will appear increases.<p class='figcaptionspacer'></p>The ladybug sketch explores interactivity&#58; a click on any of the ladybug’s dots changes the pattern of its shell." %}
+
+  <p>
+    My search for quality data led me to the website of Cornell University’s well-renowned ornithology program. They offer a platform for birdwatchers all over the world to track their sightings, including data points such as the bird’s species, number of birds sighted, date/time, and precise location pinpointed by latitude and longitude. The dataset can be filtered by species and downloaded for free. My initial plan allowed my users to search and filter the app I’d build by any species they wanted, so I attempted to download the entire set of data for <em>all</em> birds ever sighted and recorded. But when my computer crashed every time I tried, I realized I’d have to work with a smaller set of data, so I chose a subset of species to represent various migration patterns.
+  </p>
+
+  {% include image.html image="data.jpg" alt="An expansive spreadsheet showing albatross data organized by dozens of columns containing various metadata." caption="This small sampling of the data for albatrosses alone reveals the abundance of included metadata, much of which was irrelevant to my needs. I cleaned the data by deleting all columns except those listing species, date, and location in latitude and longitude." %}
+
+  <p>
+    Time, location, and bird species remained the most important pieces of data for the visualization. I sketched to explore how the relationships between this data could be laid out on a screen and considered what the user might learn if they could manipulate each of the data types in some way. Would the ability to change the speed at which time was visualized enhance the user’s understanding of migration? What about the capacity to zoom in or out of a specific area, or filter by species?
+  </p>
+
+  <p>
+    I iterated on the idea of showing location on a globe that the user could spin or zoom in on. The globe’s 2-D circle shape could double as a year-long clock, allowing the user to scrub around the perimeter that portrayed a year at their own pace, while dots representing bird sightings moved. The center of the screen could act as a search bar with a type-ahead system, where the user could look for various bird species.
+  </p>
+
+  {% include image.html image="ui-sketches.jpg" alt="Two side-by-side sketches with notes, both showing a large circle in the center. In the first, the circle frames a globe, in the second it frames the Florida peninsula." caption="I start all my projects on paper, sketching to iterate quickly and cheaply, before I get too invested in a single solution. Here I examined how filtered species could be displayed as tags in the upper left, how zooming could be controlled, and a possible method to visualize time passing via a circular clock in the center of the screen." %}
+
+  <p>
+    My final design incorporated elements of my sketches, but lack of time and technical ability prevented me from building interactivity into all of the data’s dimensions. I prioritized interactions relating to which species were shown over interactions regarding clock speed and location-zooming: allowing the user to choose which migration paths they observed might encourage comparison and critical thinking about species’ behaviors.
+  </p>
+
+  <p>
+    I started building the visualization in distinct, rough sketches, each constituting a single chunk of functionality. After I refined each sketch individually, I incorporated them into a single Processing file.
+  </p>
+
+  {% include image.html image="processing-sketches.gif" alt="Three rough Processing sketches: the first of a mouse hovering on a white square which changes to red, and then clicking it, changing it to blue. The second depicts a red dot making its way around the perimeter of a circle while the center holds a number counting up. The last has circles changing in location and count quickly." caption="These early sketches explore the functionalities I’d need to incorporate into my visualization: actionable buttons, an analog clock, and dots depicting location that change over time." %}
+
+  <p>
+    Once I had pulled together all the functionality-related code, I identified repeated variables I’d need to visually refine, such as colors and the sizes of dots and buttons. Rather than modifying the individual RGB coordinates for a certain color everywhere it occurred in the code, I instead assigned it a named variable, such as *cerulean*. I made a separate file to hold these named variables’ values, which enabled me to quickly explore and tweak visual treatments: a single change to <em>cerulean</em>’s RGB value affected every place it occurred in the code.
+  </p>
+
+  {% include image.html image="code.jpg" alt="Three side-by-side Processing interfaces: the first holds the primary code for my app, and the last two contain the named variables and values for visual treatments and species-related content respectively." caption="I wrote one large primary code file that referenced two other tabs holding named variables: one for colors and sizes, and another for species-related content." %}
+
+  <p>
+    As a self-identifying color nerd, I completely geeked out when I established the color scheme for the dots that portray each of the 25 bird species I had selected. Bright colors would easily stand out against the gray background I had assigned to the map, so I evenly distributed 25 circles around the perimeter of an RGB color wheel to ensure each color was as far from its neighbors as possible, thereby mitigating color misidentification on the map. Some colors, like the greens, were too similar to sufficiently distinguish from one another optically, so I manually adjusted them. Then I attempted to assign each of the bird species a color that complimented part of its plumage or alluded to its name, and made sure that neighboring colors went to birds with differing migration paths to prevent similar colors from overlapping and causing confusion.
+  </p>
+
+  {% include image.html image="colors.jpg" alt="On the left: a graded color wheel surrounded by 25 evenly spaced markers. On the right: the final color selections and the birds they were assigned to represent." caption="An RGB color wheel helped me establish bright yet relatively distinct hues with which to represent each of my selected species on the map." %}
+
+  <p>
+    I wanted to incorporate a visual depiction of each of the bird species to help users mentally connect the moving dots on the map to the animals they stood for. I created illustrations rather than using photos found elsewhere so I that could incorporate each bird’s assigned color and build a stronger association between it and the dots representing it. A playful, geometric illustration style appealed to me in part because it would blend in well with the UI’s other form factors like the circles of the clock and buttons, and the flat, vector-based map.
+  </p>
+
+  {% include image.html image="illustrations-in-progress.jpg" alt="A sampling of nine bird photo-illustration pairings. Each photo has lines and circles overlaid which built the foundation for the structure of the illustration." caption="I used a geometric style to keep the illustrations simple, but I still wanted each bird to be recognizable by its signature posture or behavior. Photos helped me identify and ensure I captured these aspects, providing the structure behind the illustrations’ simplified silhouettes." %}
+
+{% include sectionclose.html %}
+
+{% include section.html sectionname="Outcomes" id="outcomes" %}
+
+  <p>
+    To try out Worldly Birds yourself, download an <a href="assets/images/projects/worldly-birds/Worldly_Birds-MacOSX.app.zip">applet for your Mac</a> or an <a href="Worldly_Birds-Windows64.exe">extension for your Windows device</a>.
+  </p>
+
+  <!-- MAY NEED TO INSERT INSTRUCTIONS ABOUT MAC SECURITY GUIDELINES HERE... -->
+
+  <figure>
+    <iframe src="//player.vimeo.com/video/269521317?title=0&byline=0&portrait=0&color=2caeb3" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="postvideo-16-9-ratio"></iframe>
+    <figcaption class="s-textface">
+      <hr class="toprule">
+      Which birds go where, and when? Scientists keep track of the species they sight to learn more about migratory patterns. The seasonal sightings for this sampling of 25 birds can be compared by toggling their buttons on and off.
+    </figcaption>
+  </figure>
+
+  {% assign galleryid = "sequence" %}
+  {% assign gallery = '<img src="/assets/images/projects/worldly-birds/sequence/sequence_1.gif" alt="An animated .GIF of the Worldly Birds app, wherein the ruby-throated hummingbird’s and gold-crested flicker’s buttons are hovered on, embiggening their sighting’s dots on the map. (Embiggening is a real word, yo! So of course I had to use it somewhere.)" class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/worldly-birds/sequence/sequence_2.gif" alt="Another animated .GIF of the app, with the sandhill crane’s, gold-crested flicker’s, and northern pintail’s buttons being turned off, leaving only three remaining buttons on (and therefore only three colors of dots on the map for easy tracking)." class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/worldly-birds/sequence/sequence_3.gif" alt="The arctic tern’s button is turned off, but is being hovered on, resulting in its sighting dots being enlarged but only shown as outline with an empty fill, correlating to the treatment of buttons when they are off." class="contentimage" id="galleryimage">' | split: " 🟡 " %}
+  {% assign captions = 'When several buttons are on, it can be difficult to distinguish specific species’ patterns. Hovering on a button enlarges its associated dots, making it easy to track. 🟡 Buttons can be toggled off to minimize the number of species shown at a time, allowing for easier comparisons. 🟡 Hovering on a button even after it’s been turned off surfaces its species’ data points, enabling quick comparison to other birds on a whim.' | split: " 🟡 " %}
+  {% include gallery.html %}
+
+  <p>
+    The name for the visualization came to me in the middle of the project … and at the height of the Angry Birds craze (inspiration can come from anything, they say!). I felt the name <em>Worldly Birds</em> succinctly summed up the stories told by each trail of dots. I knew data visualization was capable of clarifying information and lending it context, but before I saw the numbers from my spreadsheets appear as roaming dots on the map, I didn’t fully realize the power that it also possessed for storytelling. I found myself imagining arctic terns stopping for snack breaks at island outcroppings and penguins preparing to dive in and lose sight of land for days at a time, all because of what the data revealed to me.
+  </p>
+
+  {% assign galleryid = "migration-sampling" %}
+  {% assign gallery = '<img src="/assets/images/projects/worldly-birds/migration-sampling/migration-sampling_1.gif" alt="The arctic tern’s sightings range from the northern hemisphere in its summer, to Antarctica and the southern tips of South America, Africa and New Zealand during the southern hemisphere’s summer." class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/worldly-birds/migration-sampling/migration-sampling_2.gif" alt="The little bee-eater’s path ranges from Europe and the Middle East in July to the southern half of Africa in January." class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/worldly-birds/migration-sampling/migration-sampling_3.gif" alt="Ruby-throated hummingbirds tend towards Mexico and the east coast of the US in January, then move West and up the coast to Alaska by June and July." class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/worldly-birds/migration-sampling/migration-sampling_4.gif" alt="Snowy owls are sighted around the northern half of the US during the winter months, and up into northern Canada and Alaska in the summer." class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/worldly-birds/migration-sampling/migration-sampling_5.gif" alt="Sightings for the arctic tern, little bee-eater, ruby-throated hummingbird, and snowy owl are shown together over the course of a year." class="contentimage" id="galleryimage">' | split: " 🟡 " %}
+  {% assign captions = 'These sped-up single-species time lapses show the variation between migrants in the bird family, and reveal the narratives hiding within their data. 🟡 These sped-up single-species time lapses show the variation between migrants in the bird family, and reveal the narratives hiding within their data. 🟡 These sped-up single-species time lapses show the variation between migrants in the bird family, and reveal the narratives hiding within their data. 🟡 These sped-up single-species time lapses show the variation between migrants in the bird family, and reveal the narratives hiding within their data. 🟡 Comparing all four species simultaneously exposes the difference in each species’ needs over the course of a year.' | split: " 🟡 " %}
+  {% include gallery.html %}
+
+{% include sectionclose.html %}
+
+{% include section.html sectionname="Live + learn" id="livelearn" %}
+
+  <ul>
+    <li>
+      <strong>I wish I had tied in more of the science and rationale for <em>why</em> these birds migrate at all, and the physical traits they’ve evolved to efficiently do so.</strong> Along with names and illustrations, I’d love to have included information around how species’ habitats and feeding needs change seasonally, average body-length-to-wing-span ratios, and explanations of any other characteristics that help these birds on their journeys, like magnetoreception. Extra details like these would give the user a fuller context and help them make deductive connections between animals’ needs and the form factors they’ve evolved.
+    </li>
+    <li>
+      The existence of each data point on the map depends on a bird <em>and</em> a human (one who is semi-ornithologically savvy and a contributor to the data platform, at that) <em>both</em> having been present at the same moment. With that knowledge, <strong>it could be argued that some of these patterns are more indicative of <em>human</em> “migration” (or at least <em>vacation</em>) habits</strong>. I included a description of the app and the data it uses within the UI, but looking back, <strong>I’d like to have made this dependency of the data somehow more obvious in the design.</strong>
+
+      {% include image.html image="dot-dependency.jpg" alt="Venn diagram conveying the idea that data points in my visualization exist solely at the intersection of a bird and a bird spotter." caption="Dots only exist on the map at the intersection of bird <em>and</em> bird spotter." %}
+
+    </li>
+    <li>
+      Despite my painstaking selection technique, <strong>showing only 25 bird species still feels arbitrary to me</strong>. And as a self-proclaimed arbitrary-abolitionist, this does not sit well with my soul. <strong>The actual species-toggling functionality I built was a compromise given my constraints, but it maximizes the user’s ability to play, engage, and learn by comparing differing migration patterns.</strong>
+    </li>
+  </ul>
+
+{% include sectionclose.html %}

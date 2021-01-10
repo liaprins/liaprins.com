@@ -1,0 +1,148 @@
+---
+title: Curiosity-Colored Glasses
+thumb: curiosity-colored-glasses.jpg
+intro: Since seventh grade, I have cultivated an ever-evolving collection of questions&#58; How is helium harvested? Why does the moon perpetually keep the same face toward Earth? When preceding “glasses”, should I put a hyphen between “curiosity” and “colored”? I recorded the first quandary in my spiral-bound notebook well before Googling it was a feasible option. And while consulting Google for a quick answer is certainly a possibility now, <strong>the questions on this list seem to deserve more&#58; each harbors not only an answer but also a story; beyond simply satisfying my own curiosity, they possess the power to spark someone else’s</strong>. So I built a <a href="https://curiositycoloredglasses.com/">website</a> to log my investigations and their findings, with a secret agenda&#58; to <strong>provoke the capacity for a curiosity within my readership that changes the way they view the world</strong>—from a birthday party balloon to the full moon, even to grammatically ambiguous blog titles.
+landing-page: <a href="https://curiositycoloredglasses.com" target="_blank">curiositycoloredglasses.com</a>
+project-pretext: Personal
+objective: Design and code my own blog
+timeframe: 2 years off-and-on from conception to planned launch (not counting the question gathering lead-up that started back in middle school)
+target-audience: Anyone with a desire to better understand the world in which we live
+---
+
+{% include section.html sectionname="Opportunities" id="opportunities" %}
+
+  <ul>
+    <li>
+      <strong>A blog, by definition, provides the ability to publish to a potentially limitless audience.</strong> If my readers were to walk away with comprehension at the very least—if not inspiration—I’d need to incorporate ways to welcome learners at all levels.
+    </li>
+    <li>
+      Each post tells a different story, therefore requiring the freedom to be visually communicated in its own way as well. <strong>I had to design an interface that could accommodate varied illustration styles and detailed diagrams without coming across as busy or overwhelming</strong>.
+    </li>
+  </ul>
+
+{% include sectionclose.html %}
+
+{% include section.html sectionname="Process" id="process" %}
+
+  <p>
+    This project started as a simple collection of questions, partly because I like asking questions, and partly because I like collecting things. Then one day, my friend and I were chatting about blogs: what would we blog about if we each had our own? My friend said she’d have a cooking blog. I loved everything about the idea—visually and verbally breaking down one’s process, adding anecdotes from the experience, and encouraging onlookers—except for the cooking part. I wondered if just maybe my question collection and its subsequent investigations could serve as fodder for a blog of my own.
+  </p>
+
+  {% include image.html image="list-in-notebook.jpg" alt="The inner back cover of one of my recent notebooks features a list of future investigations." caption="Note to self: <em>look into what part of plant bananas are. And coconuts.</em> These things scurry through my brain at any given moment, making their way onto the nearest scrap of paper and eventually into my compilation of questions." %}
+
+  <p>
+    A blog connected to the World Wide Web would mean I could share the fascinating findings my quandaries led to, rather than keep them all to myself. I thereby took on the challenge of communicating these explorations and results in a way that others could benefit from.
+  </p>
+
+  {% include image.html image="hyphenation-chart.jpg" alt="What at first seems to be a paper covered in ink scribbles is in fact a decision tree walking through questions and answers to determine whether a hyphen is needed in any given situation." caption="This monstrosity is the self-serving output of a hyphenation-related question. I was, in fact, wondering if my blog title needed a dash to be grammatically correct, and my research sort of spiraled out of control from there. But who hasn’t needed to know when to use a hyphen at one point or another? Others could benefit from my madness, as long as I committed to sharing it in a slightly more refined way."%}
+
+  <p>
+    “Curiosity-Colored Glasses” summed up everything my blog stood for, from the lens through which it implicitly looked out at the world to the approachable optimism implied by the aphorism from which it was borrowed. I purchased the associated domain name and went to work exploring how to visually communicate my mission.
+  </p>
+
+  {% include image.html image="wordmark-sketches.jpg" alt="Early sketches explore the potential of pulling in a visual metaphor as part of my blog's wordmark, turning the two “O”s in “color” into a pair of spectacles with the “L” between them as a nose." caption="I explored illustrative ways to play up the title, but ultimately settled on a simple, blocky, black and white framework for my blog as a whole. This would allow me to explain concepts through potentially complex diagrams and varying illustration styles, without the blog’s brand adding clutter." %}
+
+  <p>
+    I sought out every opportunity to hijack the user’s experience with delight, adopting a simple eyeglasses motif and exploring how it could creatively recur throughout the UI in unexpected ways, with each occurrence reinforcing my blog’s mission to inspire curiosity.
+  </p>
+
+  {% include image.html image="loader-storyboarding.jpg" alt="Two notebook pages filled with eyeglasses sketches in various states of blinking, winking, and roving function as storyboards for my loader animation concept." caption="Storyboarding helped me document ideas for a custom loading animation. My initial thought had been to use two typical loading wheels side-by-side, suggesting spectacles. After continuing to iterate, I landed on a more imaginative idea: a pair of glasses’ arms would open, only to be occupied by curious, roving eyes that blinked expectantly." %}
+
+  {% include image.html image="loader-animation.gif" alt="An animated .GIF demos the concept of the loader animation." caption="I mocked up a rough .GIF in Photoshop too get a better sense of whether my idea for a loading animation would communicate properly." %}
+
+  {% include image.html image="hover-instagram-video.gif" alt="This is a video illustrating my prototype in action, wherein the first hover state zooms into the center of each lens of my glasses icon independently, and the second option zooms into the center of the glasses as a whole." caption="I planned to have a simplified eyeglasses icon represent each blog post on the home page, the lenses of which I’d fill with imagery alluding to the post’s content. Hovering would trigger one of two possible a zoom effects. But when I couldn’t decide which one to use, I built a quick prototype in code, shot a screen capture video, and consulted my Instagram followers for feedback." %}
+
+  {% include image.html image="comment-avatars.jpg" alt="Three example comments from example commenters without their own image, thereby assigned an avatar: a yellow square with stylized cat eyes glasses, a green square with circle rims, and a blue background with square rims." caption="Comment avatars featuring cat-eye, circle, and square frame options round out the eyeglasses motif." %}
+
+  <p>
+    I planned to code my whole site and its content management system (CMS) from scratch as an incentive to brush-up on my browser-based coding skills (but mostly so that I could have complete control over its every detail … muahahaha!). I selected a lightweight, file-based CMS called Kirby to provide the integrations between my blog’s coded structure and its content. This meant I’d have to learn new languages: PHP to make my site dynamic and link it to the content, YAML to create the CMS itself, and JavaScript to build out some of the behaviors my design called for.
+  </p>
+
+  {% include image.html image="books.jpg" alt="“HTML & CSS” and “JavaScript & JQuery” by Jon Duckett; “Learning Responsive Web Design” by Clarissa Peterson, published by O'Reilly; “Designing Interface Interaction” by Val Head." caption="Learning by book is my preferred method for intaking this kind of information: <em>HTML & CSS</em> and <em>JavaScript & JQuery</em> by Jon Duckett; <em>Learning Responsive Web Design</em> by Clarissa Peterson, published by O’Reilly; and <em>Designing Interface Interaction</em> by Val Head." %}
+
+  <p>
+    Planning played a crucial role in my process. I routinely put pen to paper in an effort to make my code—and the time I spent writing it—more efficient and organized.
+  </p>
+
+  {% include image.html image="html-planning.jpg" alt="I drew colored boxes around planned HTML elements on a printout of Curiosity-Colored Glasses' home page design." caption="My tried and true method for mapping out a site’s HTML structure involves a brief hiatus from the computer. I draw and label boxes representing HTML elements atop printouts of the design, applying color-coding to better keep track of layers." %}
+
+  {% include image.html image="js-flow.jpg" alt="A decision tree maps out a JavaScript function, making ample use of variously colored highlighters to encode reusable methods." caption="Colors helped me identify reusable functions when I drew out this decision-filled JavaScript flow. Ultimately, my investment in sketching before going to the keyboard resulted in much more performant code." %}
+
+  {% include image.html image="slideshow-click-interaction-list.jpg" alt="I printed a list of all interactions and subsequent behaviors my gallery and lightbox modules would need to accommodate. Then I took colored ballpoint pens and encoded those list items that accomplished the same effect, and could thereby use the same JavaScript function." caption="The interactions within my designs for galleries and lightboxes resulted in the most complex script I’ve ever written. I could have used any of the plethora of pre-existing libraries, but I was stubbornly determined to figure out how to do this all on my own! Once again, my 10-colored ballpoint came to my rescue, assisting me in identifying which common interactions could reference the same chunks of code, and ultimately saving me several lines of redundant characters." %}
+
+  <p>
+    A CMS is advantageous for any blog because it separates the content production from the code, providing a more conducive environment within which to edit text and images. After I’d built the structure and style of my site, I set up its CMS using a configuration language called YAML. This would pass my content to the previously coded HTML structure and enable it to appear on my site.
+  </p>
+
+  {% assign galleryid = "cms" %}
+  {% assign gallery = '<img src="/assets/images/projects/curiosity-colored-glasses/cms/cms_1.jpg" alt="A left panel lists all sub-pages and files, while the right side of the CMS screen holds the content in organized fields." class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/curiosity-colored-glasses/cms/cms_2.jpg" alt="All files can be viewed together in a grid for quicker scanning." class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/curiosity-colored-glasses/cms/cms_3.jpg" alt="Individual files’ metadata can be edited, including the alt tags (which I am doing at this very moment!)." class="contentimage" id="galleryimage">' | split: " 🟡 " %}
+  {% assign captions = 'My CMS’s interface lists sub-pages and uploaded files, and helps direct content input. Common tags across multiple posts are easy to apply thanks to a type-ahead function that searches for tag names already employed on other posts, ensuring consistency. 🟡 An overview of all uploaded files makes it easy to find and place the right one. 🟡 Each uploaded image has its own sub-page within the CMS, which I coded to include fields for an optional caption and mandatory alt text.' | split: " 🟡 " %}
+  {% include gallery.html %}
+
+  <p>
+    My blog wouldn’t feel like a modern member of the World Wide Web if its design didn’t respond to various screen sizes. I planned to promote it across Instagram and Twitter, the users of which would likely end up accessing it through links on their mobile devices. Adding media queries into my CSS was easy; the tough part came with creating cohesive designs that felt fluid between breakpoints, and that changed from size to size in ways that accounted for the content.
+  </p>
+
+  {% include image.html image="column-diagram.jpg" alt="Diagrams of my grid designs for four major breakpoints." caption="Merging columns and rows as needed, I used the table functionality of <a href='https://docs.google.com/document/d/1CDo1fxy3FleJGFHQiQNBwkCSxee1Ls5fE-sKb_PSje4/edit?usp=sharing'>a Google Doc</a> as a medium with which to diagram the grid-structure that held my design together at each breakpoint." %}
+
+  {% include image.html image="responsive-feature-planning.jpg" alt="Table with 5 columns, one for each breakpoint, hold lists of components that change with various media queries. Cells merge across columns when the component does not change for a media query." caption="I created <a href='https://docs.google.com/document/d/1I9U1EirdvroHSvzlnR8KnaW7TG4GynG09FaetVK2EsA/edit?usp=sharing'>another Google Doc</a> to track individual components’ behaviors across breakpoints, helping me ensure I’d accounted for every detail in my design." %}
+
+  {% include image.html image="responsive-wireframes.jpg" alt="Notebook pages with wireframe sketches explore possible permutations of image and caption layouts." caption="My ever-present quiver of colorful writing utensils helped me chart out possible layouts at each breakpoint. Here I explored how to render images of differing aspect ratios on vertically and horizontally oriented screens." %}
+
+  <p>
+    If the launch of my site was dependent upon perfection, my blog would only ever live on my localhost. I’ll continue to improve its code over time, relying heavily upon the troubleshooting experience I’ve cultivated so far.
+  </p>
+
+  {% include image.html image="troubleshoot-spread.jpg" alt="I listed out a plan to test what was causing the issue. I sketched out my findings of three overlapping variables as a Venn diagram." caption="These pages log my plan of attack against—and eventual vanquishing of—a particularly nasty bug of the Safari-only strain. In an attempt to discern what was causing my content to render invisibly small at just 1 pixel tall, I systematically manipulated my CSS, HTML, and mediaqueries. Once I’d narrowed down the combination of variables causing the issue, it was just a matter of reconfiguring part of my code, thereby restoring my content to its proper height." %}
+
+{% include sectionclose.html %}
+
+{% include section.html sectionname="Outcomes" id="outcomes" %}
+
+  <p>
+    <a href="http://curiositycoloredglasses.com/">curiositycoloredglasses.com</a> shouted “Hello, World!” recently. Visit it to learn something new and test out the functionality, or take a look at the screen captures below!
+  </p>
+
+  {% include image.html image="hover-demo.gif" alt="An animated .GIF demonstrates the zoom effect of a blog post’s eyeglasses icon when hovered in context of the entire home page." %}
+
+  <p>
+    Curiosity-Colored Glasses is accessible on all screen sizes, from mobile devices to desktop monitors.
+  </p>
+
+  {% include image.html image="responsivity.gif" alt="Curiosity-Colored Glasses' responsivity is shown in an animated .GIF of the browser being dragged from the full width of a desktop to the narrower width of a mobile device, while onscreen elements shift accordingly." %}
+
+  <p>
+    When I read books as a kid, every time I came across a word I didn’t know I’d write it down on the back of my bookmark so I could look it up in the dictionary later. This was only a partial solution, though—I still missed out on understanding my first encounter of the word in its context. I wanted to prevent this problem as much as possible for my own readers, so I built special functionality into my content management system that would allow me to add hidden definitions to particularly esoteric terms.
+  </p>
+
+  {% include image.html image="vocab-demo.gif" alt="An animated .GIF shows how the definition feature of Curiosity-Colored Glasses' posts works: the user simply clicks a terms (stylized to indicate it has a definition attached), and its pronunciation (both written and as as an audioclip), definition, and illustration pop out as a sidebar." caption="The pop-up definitions include space for written and audio pronunciations, as well as an illustration." %}
+
+  <p>
+    The Question Queue stores a list of my forthcoming investigations. In the future I’d like to add a voting system, so readers can up-vote the topics they’re most interested in.
+  </p>
+
+  {% include image.html image="qq.gif" alt="An assortment of binoculars with images filling their lenses are parallax-scrolled. Two are clicked on, opening text boxes containing questions that I plan to investigate." caption="It was tricky, but I programmed this page so that I can continuously add more entries via my CMS as they pop into my mind. The question will then be automatically placed onto one of the parallax layers and the page as whole will lengthen accordingly. I used PHP to randomize each pair of binoculars’ margins so the page layout looks more organic. A long series of JavaScript if-statements carefully position the opened question boxes, preventing them from extending off the page." %}
+
+  <p>
+    I decided to pay homage to my most trusted and consulted resources by way of a “library” page. Readers can explore an array of illustrations each standing in for a book, video, podcast, person, or other resource.
+  </p>
+
+  {% include image.html image="library.jpg" alt="The library page of Curiosity-Colored Glasses contains an array of small illustrations. When selected, they expand to include a title and description of my appreciation." %}
+
+  <p>
+    The eyeglasses motif makes one more artistic appearance on the 404 page.
+  </p>
+
+  {% include image.html image="error-page.jpg" alt="A hand-drawn pair of upside-down spectacles rests below the 'page not found' title." %}
+
+{% include sectionclose.html %}
+
+{% include section.html sectionname="Live + learn" id="livelearn" %}
+
+  <ul>
+    <li>
+      <strong>I relished this project as an opportunity to bring my vision into the world without compromise</strong>—so unlike the convoluted inner workings inherent to my position within an enormous organization, where the possibility that my designs never make it to market always lingers due to any number of factors beyond my control. However, the self-assigned nature of this project allowed me to be quite perfectionisty, which in turn decelerated its journey to my audience. <strong>I could have started <em>acting</em> on my mission much sooner if I’d taken advantage of a platform with templates or just used pre-existing plug-ins for some of the more complex parts in my code.</strong> But I broadened my context of front-end development and learned so many valuable skills that I can’t quite say I regret my stubborn insistence to code every aspect of the site myself.
+    </li>
+  </ul>
+
+{% include sectionclose.html %}

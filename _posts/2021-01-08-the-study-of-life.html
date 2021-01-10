@@ -1,0 +1,169 @@
+---
+layout: post
+title: The Study of Life
+thumb: the-study-of-life.jpg
+intro: Isaac Newton summed up the self-effacing secret to scientific discovery when <a href="https://digitallibrary.hsp.org/index.php/Detail/objects/9792" target="_blank">he declared</a>, “If I have seen further, it is by standing on the shoulders of giants.” <strong>Providing effective and well-placed footholds for the next generation of titan-scaling scientific explorers is one of formal education’s gravest responsibilities—and most significant challenges</strong>&#58; my more dire high school memories find me defeatedly measuring my reading assignments in fractions of book-spine inches and reaching aimlessly for any sort of relevance to the route that my future might take. Some distance down that route, my college capstone project presented the perfect opportunity to investigate this dilemma from a design perspective. <strong>I planned to overhaul the contemporary textbook, exploring how its usual static, text-heavy approach to lessons could be enhanced with imagery and interactivity to deliver understanding at scale.</strong>
+project-pretext: Academic
+objective: Create a capstone project of my own desig
+timeframe: 5 weeks
+target-users: High school biology students
+---
+
+{% include section.html sectionname="Opportunities" id="opportunities" %}
+
+  <ul>
+    <li>
+      I wanted to <strong>reveal the relevance of science</strong> by reducing the degrees of separation between lessons and their bearing on my would-be readers’ futures.
+    </li>
+    <li>
+      The physicality of textbooks poses problems: <strong>their sheer size inhibits them from becoming part of regular routines</strong>—like bus rides and coffee shop stops—where their content could otherwise be consumed more efficiently and enjoyably. <strong>They’re also dense by design</strong>, necessarily packing as much as possible into fewer physical pages, resulting in a high text-to-imagery ratio. It seemed to me that tablets, combined with thoughtful design, held the potential to liberate textbooks from these particular issues.
+    </li>
+    <li>
+      Materials like textbooks reach a multitude of students. But if they’re ever to educate effectively at this scale, <strong>their approaches must be diverse enough to broach all of these students’ varied learning styles</strong>.
+    </li>
+  </ul>
+
+{% include sectionclose.html %}
+
+{% include section.html sectionname="Process" id="process" %}
+
+  <p>
+    I started by examining several existing biology books, both physical and digital. The photos and diagrams alongside their text-filled pages pulled me in, but once they had my attention, their chaotically arranged elements distracted me. Visual information was bottlenecked by the limitations of the static page it inhabited, forced to appear—overwhelmingly—all at once, rather than reveal itself as a carefully paced sequence.
+  </p>
+
+  {% include image.html image="external-examples.jpg" alt="A cell map from a print book is covered in labels and connecting lines. Next to it, a chemical cell process map contains more than 20 arrows and as many labels as it attempts to convey all parts of the process simultaneously." caption="Labels and lines crowded the white space of an illustration I found within a bound book. But the tablet-specific textbook I looked at offered no improvement: arrows galore attempted to illustrate a sequential biochemical process in a single static image that left me wondering where to look first." %}
+
+  <p>
+    Visual storytelling, then, could potentially play a crucial role in improving the intake of information, but so might narrative. A podcast episode I’d heard many months earlier eloquently and compellingly summed up the values intrinsic to the pursuit of scientific discovery, and had instantly crystalized my personal motive to make the resulting knowledge more consumable. I decided to open my book with an audio clip and transcript of the talk, as an introduction to the scientific process.
+  </p>
+
+  <figure>
+    <audio controls style="width:100%;">
+      <source src="podcast.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <figcaption class="s-textface">
+      <hr class="toprule">
+      Listen for yourself to neuroscientist Doug Fields’ inspiring account as told to the <em><a href="https://www.storycollider.org/stories/2016/1/6/doug-fields-reaching-for-discovery" target="blank">Story Collider</a></em> podcast.
+    </figcaption>
+  </figure>
+
+  <p>
+    I located a chapter’s worth of open-source text introducing cells as the building blocks of life, and set to work restructuring it. Once I had sorted the text into a roughly linear framework, I began to identify areas that would benefit from some sort of visual assistance in order to be better understood or engaged with.
+  </p>
+
+  {% include image.html image="pacing.jpg" alt="My notebook spread, covered with 32 tiny sticky notes in a careful grid. Each has notes and highlighted color-coding." caption="Post Its were the ideal material with which to chart out a flexible outline: I assigned each chunk of content and its associated media a tiny sticky note all its own that I could then neurotically arrange and re-arrange as I iterated on the visual pacing and progression of the chapter as a whole." %}
+
+  <p>
+    My own interest and appreciation of biology informed the visual style of my book. I knew I wanted it to exude energy like the science it would teach about, but I also needed it to feel grown-up, not patronizing or childish, so I looked for visual inspiration outside of existing textbooks—in magazines, online, and even from nature documentaries.
+  </p>
+
+  {% include image.html image="moodboard.jpg" alt="A moodboard of found, bright, imagery." caption="Photos featuring bold colors and varying textures appealed to me for the energy they conveyed; their zoomed-in subject matter and uncommon camera angles suggested new outlooks on our seemingly familiar world." %}
+
+  <p>
+    I used Adobe InDesign’s Digital Publishing Suite to design and export my book chapter, taking advantage of the technology to bring my illustrations to life with interaction. Some single-celled organisms use small hair-like structures called cilia to navigate their environment; this movement-centric concept seemed to beg to be animated in some way. I decided to build the motion of these cilia into a flipbook-like module that the user could flick through.
+  </p>
+
+  {% include image.html image="interactive.jpg" alt="An illustrated cilium overlays a diagram mapping the motion of a single cilium. Next to it is a series of panels of all cilia, each representing a single step of the previously mentioned diagram." caption="I was fortunate enough to find a diagram mapping out the motion of a single cilium, step-by-step. I traced each of its phases to an individual artboard before exporting as a series of images, uploading to InDesign, and creating the flipbook interaction." %}
+
+  {% include image.html image="interactivity.gif" alt="An animated .GIF shows the cilia illustration in action." caption="The speed of the user’s swipe controls the rate at which the flipbook frames animate: a fast flick reveals cilia’s efficiency and elegance as a biological device for movement, while a slower drag of the finger affords the opportunity to more closely study the motion’s mechanics." %}
+
+  <p>
+    After designing each interactive element for my book chapter, I identified the tablet gestures they necessitated from the user, and explored how to visually indicate which gesture was required where. I wanted each action to be clear, but also for the icons’ styles to fit together cohesively.
+  </p>
+
+  {% include image.html image="sketch.jpg" alt="A notebook spread features sketches exploring gesture icon concepts." %}
+
+  {% include image.html image="nav-icons-artboard-black.png" alt="I explored over 30 digital manifestations of gesture icons." caption="My first phase for creating anything involves what I call “drawing for divergence”: I sketch ideas with a focus on quantity, attempting to explore as many differing directions as I can." caption="When I move from paper to computer, I filter out less feasible ideas and eventually converge on a decisive direction. The icons on the bottom row made the final cut, in part because they were most readable when overlaid on their busy backgrounds of photos and illustrations." %}
+
+  <p>
+    I developed and relied on a strong grid system, type scale, and color palette to keep the various elements of my design cohesive and structured.
+  </p>
+
+  {% include image.html image="grid.jpg" alt="Three screens with their grids overlaid." caption="I used two overlapping grids to account for both imagery (the aqua lines) and body copy (a purple box offset to the left)." %}
+
+{% include sectionclose.html %}
+
+{% include section.html sectionname="Outcomes" id="outcomes" %}
+
+  <p>
+    Biology is, at its very essence, the study of life. My awareness and appreciation of this informed not only my book’s title, but also its imagery, interactions, and visual style. Life grows, adapts, changes, and moves; such a stimulating subject matter practically implored me to present it vibrantly and vigorously.
+  </p>
+
+  <figure>
+    <iframe src="//player.vimeo.com/video/269395770?title=0&byline=0&portrait=0&color=2caeb3" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="postvideo-16-9-ratio"></iframe>
+    <figcaption class="s-textface">
+      <hr class="toprule">
+      A biology textbook designed for a tablet, <em>The Study of Life</em> enlightens high school students through a range of approaches including stories, interviews with professionals in the field, interactive diagrams, and videos.
+      </figcaption>
+  </figure>
+
+  <p>
+    When explained effectively, biology becomes a topic that everyone can relate to, as it reveals insights into every bit of the world around us. The butterfly wing on the cover exemplifies how a seemingly simple subject can reveal delightful details when examined more closely.
+  </p>
+
+  {% assign galleryid = "ipad-pairings" %}
+  {% assign gallery = '<img src="/assets/images/projects/the-study-of-life/ipad-pairings/ipad-pairings_1.jpg" alt="ALT" class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/the-study-of-life/ipad-pairings/ipad-pairings_2.jpg" alt="ALT" class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/the-study-of-life/ipad-pairings/ipad-pairings_3.jpg" alt="ALT" class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/the-study-of-life/ipad-pairings/ipad-pairings_4.jpg" alt="ALT" class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/the-study-of-life/ipad-pairings/ipad-pairings_5.jpg" alt="ALT" class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/the-study-of-life/ipad-pairings/ipad-pairings_6.jpg" alt="ALT" class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/the-study-of-life/ipad-pairings/ipad-pairings_7.jpg" alt="ALT" class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/the-study-of-life/ipad-pairings/ipad-pairings_8.jpg" alt="ALT" class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/the-study-of-life/ipad-pairings/ipad-pairings_9.jpg" alt="ALT" class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/the-study-of-life/ipad-pairings/ipad-pairings_10.jpg" alt="ALT" class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/the-study-of-life/ipad-pairings/ipad-pairings_11.jpg" alt="ALT" class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/the-study-of-life/ipad-pairings/ipad-pairings_12.jpg" alt="ALT" class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/the-study-of-life/ipad-pairings/ipad-pairings_13.jpg" alt="ALT" class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/the-study-of-life/ipad-pairings/ipad-pairings_14.jpg" alt="ALT" class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/the-study-of-life/ipad-pairings/ipad-pairings_15.jpg" alt="ALT" class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/the-study-of-life/ipad-pairings/ipad-pairings_16.jpg" alt="ALT" class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/the-study-of-life/ipad-pairings/ipad-pairings_17.jpg" alt="ALT" class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/the-study-of-life/ipad-pairings/ipad-pairings_18.jpg" alt="ALT" class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/the-study-of-life/ipad-pairings/ipad-pairings_19.jpg" alt="ALT" class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/the-study-of-life/ipad-pairings/ipad-pairings_20.jpg" alt="ALT" class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/projects/the-study-of-life/ipad-pairings/ipad-pairings_21.jpg" alt="ALT" class="contentimage" id="galleryimage">' | split: " 🟡 " %}
+  {% assign captions = ' 🟡  🟡  🟡  🟡  🟡  🟡  🟡  🟡  🟡  🟡  🟡  🟡  🟡  🟡  🟡  🟡  🟡  🟡  🟡  🟡 ' | split: " 🟡 " %}
+  {% include gallery.html %}
+
+  <p>
+    I structured the text to act as a tour of the cell, its concepts tangibly rooted in and organized by the responsibilities and functions managed by each of the cell’s organelles. An interactive map of the cell allows students to see how the next idea they’ll be learning fits into the bigger picture of the cell and its systems as a whole.
+  </p>
+
+  {% include image.html image="cell-map.gif" alt="A stylized animal cell map highlights its various organelles as the buttons that control them are tapped." caption="Readers can open the cell map from any section of text to see the associated anatomical component highlighted and can interact with the map’s legend to explore other organelles." %}
+
+  <p>
+    I chose high-resolution photos whenever I could, building in pan-and-zoom functionalities to mimic the operations of a microscope.
+  </p>
+
+  {% include image.html image="pan-and-zoom.gif" alt="An animated .GIF featuring a photo of red onion cells is zoomed and panned." caption="In addition to its convenience and portability, the iPad-as-microscope holds another advantage over its analog counterpart, in its virtual inability to self-destructively crush a glass slide cover slip beneath a fragile and exorbitantly priced lens … no need to keep track of the coarse- versus fine-focus knobs anymore! (Please note that this does not preclude the iPad screen itself from breaking if dropped.)" %}
+
+  <p>
+    Several cell-related concepts, such as osmosis and protein transport, were too abstract or even imperceptibly microscopic to benefit from found photography. In these cases I created step-by-step illustrations, giving the user the control to move through each stage at their own pace.
+  </p>
+
+  {% include image.html image="illustration.gif" alt="Three side-by-side illustrations are tapped through to bring up their respective captions, demonstrating proteins' various tasks within the cell membrane." caption="These illustrations portray three distinct functions of phospholipid-embedded proteins." %}
+
+  <p>
+    Unfamiliar, multisyllabic terms give any reader pause. Rather than break the flow of reading to look up vocabulary, students can tap on the word in question to open its definition. The root parts and related terms appear as well, to help students develop an understanding of similar words on their own over time.
+  </p>
+
+  {% include image.html image="definition.gif" alt="The word “hydrophilic” is tapped from within the main text, bringing up a small modal with its definition, root parts, and linked related terms. Its related term “hydrophobic” is then tapped, bringing up its own modal." %}
+
+  <p>
+    A complete education enables students to understand how the content they’re taught applies to the bigger picture of their lives, and the world. The icons below can be found throughout <em>The Study of Life</em>, linking to a range of mediums that explore the main lesson from real-world perspectives.
+  </p>
+
+  {% include image.html image="supplementary-media.jpg" alt="Four icons represent various supplementary media available in the Study of Life: speech bubbles labeled “aspire” representing interviews with professionals, a lightbulb labeled “investigate”, a magnifying glass labeled “examine”, and a beaker labeled “experiment”." %}
+
+  <p class="asterisk">
+    <span class="inlinesubhead">ASPIRE</span> Students can listen to interviews with professionals from various industries such as medicine, life sciences, and ecology, to develop a more comprehensive picture of possible careers in the science sector.
+  </p>
+
+  <p class="asterisk">
+    <span class="inlinesubhead">INVESTIGATE</span> Knowledge is never static. The latest findings from scientific journals are introduced here—and in theory, could be updated regularly—adding depth and context to the curriculum.
+  </p>
+
+  <p class="asterisk">
+    <span class="inlinesubhead">EXAMINE</span> Observable wonders of the natural world are everywhere: did you know a chicken egg is considered a single cell by most scientists? <em>The Study of Life</em> presents this assertion in detail, and explores other instances of perceptible science in the everyday world.
+  </p>
+
+  <p class="asterisk">
+    <span class="inlinesubhead">EXPERIMENT</span> Digital tablets are portable and easy to use, making them the perfect lab partner. These recipe-like experiments walk students through each step with images and straight-forward instructions.
+  </p>
+
+{% include sectionclose.html %}
+
+{% include section.html sectionname="Live + learn" id="livelearn" %}
+
+  <ul>
+    <li>
+      <strong>Nearly all of the opportunities I chose to explore for this project were based on my own past experience as a textbook-laden biology student.</strong> The visual design program I was in at the time didn’t place any emphasis on research, and focused primarily on visual outcomes. But after having worked as an interaction and UX designer in the software industry for a while, I’ve developed a huge respect for and reliance on user research. <strong>I’d love to have tested this design and other iterations with real students. Short of that, developing a domain understanding around learning styles would have helped to inform and validate my designs.</strong>
+    </li>
+    <li>
+      I love the art of illuminating ideas through illustrations, and wish I could have dedicated more effort to the ones I created for this project. At the same time, I acknowledge that creating over a dozen scientific renderings could have been a capstone project all its own, so in hindsight I wonder if <strong>I could have instead incorporated existing illustrations</strong>—several impeccable portrayals of the very concepts I sought to communicate accompanied the open-source text I used. <strong>An approach like this could have made concepts explained via visuals even more engaging, while allowing me to fully focus on the bigger picture of structuring the information and designing interactions.</strong>
+    </li>
+  </ul>
+
+{% include sectionclose.html %}

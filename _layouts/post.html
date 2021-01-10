@@ -72,7 +72,7 @@
     </script>
 
     <div id="bodysub">
-        <a href="{{ site.baseurl }}">
+        <a href="{{ site.baseurl }}/">
             <img src="{{ site.baseurl }}assets/images/sitewide/back.svg" alt="Back to all projects" id="back">
         </a>
         <h1>
@@ -108,52 +108,57 @@
         </ul>
 
         <div id="intro">
-            {{ page.excerpt }}
+            {{ page.intro }}
         </div>
-
 
         <!-- TESTING PROJECT STATS SECTION -->
         <div id="stats">
 
-            {% if page.landing-page %}
-              <strong>Landing page: </strong>{{ page.landing-page }}
-            {% endif %}
+        {% if page.title == 'Watson for Drug Discovery' %}
+          <p class="asterisk">
+            <sup>1 </sup>{{ page.asterisk }}
+          </p>
+        {% endif %}
 
-            {% if page.project-pretext %}
-              <strong>Project pretext: </strong>{{ page.project-pretext }}
-            {% endif %}
+        {% if page.landing-page %}
+          <strong>Landing page: </strong>{{ page.landing-page }}<br>
+        {% endif %}
 
-            {% if page.objective %}
-              <strong>Objective: </strong>{{ page.objective }}
-            {% endif %}
+        {% if page.project-pretext %}
+          <strong>Project pretext: </strong>{{ page.project-pretext }}<br>
+        {% endif %}
 
-            {% if page.timeframe %}
-              <strong>Timeframe: </strong>{{ page.timeframe }}
-            {% endif %}
+        {% if page.objective %}
+          <strong>Objective: </strong>{{ page.objective }}<br>
+        {% endif %}
 
-            {% if page.target-audience %}
-              <strong>Target audience: </strong>{{ page.target-audience }}
-            {% endif %}
+        {% if page.timeframe %}
+          <strong>Timeframe: </strong>{{ page.timeframe }}<br>
+        {% endif %}
 
-            {% if page.target-users %}
-              <strong>Target users: </strong>{{ page.target-users }}
-            {% endif %}
+        {% if page.target-audience %}
+          <strong>Target audience: </strong>{{ page.target-audience }}<br>
+        {% endif %}
 
-            {% if page.role %}
-              <strong>Role: </strong>{{ page.role }}
-            {% endif %}
+        {% if page.target-users %}
+          <strong>Target users: </strong>{{ page.target-users }}<br>
+        {% endif %}
 
-            {% if page.team-members %}
-              <strong>Additional team members: </strong>{{ page.team-members }}
-            {% endif %}
+        {% if page.role %}
+          <strong>Role: </strong>{{ page.role }}<br>
+        {% endif %}
 
-            {% if page.output-channels %}
-              <strong>Output channels: </strong>{{ page.output-channels }}
-            {% endif %}
+        {% if page.team-members %}
+          <strong>Additional team members: </strong>{{ page.team-members }}<br>
+        {% endif %}
 
-            {% if page.guild-members %}
-              <strong>Guild members: </strong>{{ page.guild-members }}
-            {% endif %}
+        {% if page.output-channels %}
+          <strong>Output channels: </strong>{{ page.output-channels }}<br>
+        {% endif %}
+
+        {% if page.guild-members %}
+          <strong>Guild members: </strong>{{ page.guild-members }}<br>
+        {% endif %}
 
         </div>
 
