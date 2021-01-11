@@ -6,7 +6,7 @@
 // NAMED FUNCTION ----------------------------------------------------------------------------
 // Gets rid of the "#" that would otherwise remain at end of URL after closing an entry by re-clicking the icon
 // ... and returns the ability to scroll vertically
-function removeHashReturnScroll() { 
+function removeHashReturnScroll() {
     // remove #hash
     history.pushState("", document.title, window.location.pathname + window.location.search);
     // return scrollability
@@ -26,22 +26,22 @@ function lightbox(imgToShow) {
 
     // create lightbox container
     var singleLightbox = document.createElement('div');
-        
+
     // append lightbox to the <figure> element (the parent of imgToShow), since lightbox will be position: fixed; anyway
     imgToShow.parentNode.appendChild(singleLightbox);
-        
+
     // give lightbox attributes
     // to identify it later
     singleLightbox.setAttribute('id', 'singlelightbox');
     // so it can be clicked (wherever the image, caption, etc is NOT) to close itself
     singleLightbox.setAttribute('data-lightbox-close', '');
-        
+
     // give lightbox content: the <figure> element of image to show (includes its <figcaption> if there is one) + "x" button
-    // !!! the src attributes (for "x" and "^" icons) vvv will have to update when I get proper hosting and URL set up! 
+    // !!! the src attributes (for "x" and "^" icons) vvv will have to update when I get proper hosting and URL set up!
     // !!! or store the PHP version in an HTML element's attribute, then collect it in JS as a variable and call it here
     // !!! or else construct its shape with CSS (research performance) vvv
     singleLightbox.innerHTML = singleLightbox.parentNode.innerHTML + '<img src="https://liaprins.com/assets/images/x.svg" alt="close" id="lightboxclose" class="close-x yellowhover" data-lightbox-x>';
-        
+
     // remove unintentionally duplicated lightbox element from original
     // (duplicated when call the HTML of <figure> element it is attached to was duplicated as lightbox's content)
     var duplicate = singleLightbox.lastElementChild.previousElementSibling;
@@ -54,11 +54,11 @@ function lightbox(imgToShow) {
     // call NAMED FUNCTION
     // use JS to vertically center H imgs
     verticallyCenter();
-        
+
     // add #hash
     var imgURL = singleLightbox.firstElementChild.getAttribute('src');
     var imgURLArray = imgURL.split('/');
-    location.hash = imgURLArray[imgURLArray.length - 1];   
+    location.hash = imgURLArray[imgURLArray.length - 1];
 
     // stop V scrollability
     document.documentElement.style.overflow = 'hidden';
@@ -70,16 +70,16 @@ function lightbox(imgToShow) {
 
         // give caption attributes
         caption.setAttribute('class','xs-textface lightboxcaption hide');
-        // caption.style.display = "block";    
-        caption.style.display = "none";    
+        // caption.style.display = "block";
+        caption.style.display = "none";
 
         // make caption's top rule able to be visible at all sizes when lightbox, but only above 1225 when not in lightbox
         var lightboxTopRule = caption.firstElementChild;
         // lightboxTopRule.style.display = "block";
-            
+
         // add toggle icon
         var toggle = document.createElement('img');
-        // !!! the src attributes (for "x" and "^" icons) vvv will have to update when I get proper hosting and URL set up! 
+        // !!! the src attributes (for "x" and "^" icons) vvv will have to update when I get proper hosting and URL set up!
         // !!! or store the PHP version in an HTML element's attribute, then collect it in JS as a variable and call it here
         // !!! or else construct its shape with CSS (research performance) vvv
         // toggle.setAttribute('src', 'http://localhost:8888/kirby-project/portfolio/assets/images/up-arrowhead.svg');
@@ -94,7 +94,7 @@ function lightbox(imgToShow) {
         // create fake top bar via <div>, since I can't use border, because I need to have padding to create white box, and border would span padding width
         var topRule = document.createElement('div');
         topRule.setAttribute('id', 'lightboxcaptionbar');
-        singleLightbox.appendChild(topRule);   
+        singleLightbox.appendChild(topRule);
         */
     } // close if (caption)
 } // function
@@ -104,10 +104,10 @@ function lightbox(imgToShow) {
 
 // NAMED FUNCTION ----------------------------------------------------------------------------
 function populateLightboxDots(imgToShow) {
-    
+
     // if imgToShow is a gallery img
     if (imgToShow.getAttribute('id') == ('galleryimage')) {
-            
+
         // DOTS
         // create container to hold dots, within lightbox
         var lightboxDotContainer = document.createElement('div');
@@ -139,7 +139,7 @@ function populateLightboxDots(imgToShow) {
 function clickRegularViewFocusImg(e) {
     // var imgToShow = e.target;
     var clickedThing = e.target;
-    
+
     // if clicked element is a single image or the focus img in a gallery
     if (clickedThing.classList.contains('clickme')) {
 
@@ -165,7 +165,7 @@ window.addEventListener('click', clickRegularViewFocusImg, false);
 // USED FUNCTION ----------------------------------------------------------------------------
 // invoked when a lightbox dot is clicked
 function clickLightboxDot(e) {
-    
+
     var clickedThing = e.target;
 
     if (clickedThing.parentNode.getAttribute('id') == 'lightboxdotcontainer') {
@@ -173,7 +173,7 @@ function clickLightboxDot(e) {
         var clickedLightboxDot = clickedThing;
         var dotsLightboxContainer = clickedLightboxDot.parentNode;
         var gallerySlides = dotsLightboxContainer.parentNode.parentNode.parentNode.parentNode;
-        
+
         // for loop to be able to define imgToShow, based on clickedLightboxDot
         for (m = 0; m < dotsLightboxContainer.children.length; m++) {
 
@@ -186,10 +186,10 @@ function clickLightboxDot(e) {
                 currentLightbox.parentNode.removeChild(currentLightbox);
 
                 // call NAMED lightbox function
-                lightbox(imgToShow);  
+                lightbox(imgToShow);
 
                 // call NAMED function to populate lightbox dots
-                populateLightboxDots(imgToShow);               
+                populateLightboxDots(imgToShow);
 
             }  // close if
         }  // close m
@@ -266,23 +266,23 @@ window.addEventListener('click', lightboxXClose, false);
 
 // USED FUNCTION ----------------------------------------------------------------------------
 // on page load, if there are galleries, create them into slideshows
-function slideshow() {    
-    
+function slideshow() {
+
     // find any/all galleries in the blogpost
     var galleryList = document.getElementsByClassName('gallery');
 
     // get screen width
     var screenWidth = window.innerWidth;
-      
+
     // hide all captions
     var galleryCaptionList = document.getElementsByClassName('gallerycaption');
     for (h = 0; h < galleryCaptionList.length; h++) {
         galleryCaptionList[h].style.display = "none";
     }    // close h
-    
+
     // for each gallery
     for (i = 0; i < galleryList.length; i++) {
-        
+
         // declare its name, so it can be identified later vs other galleries on the page
         var galleryName = galleryList[i].getAttribute('id');
 
@@ -299,7 +299,7 @@ function slideshow() {
         placeholderBox.style.position = 'relative';
         // (1.) HERE ?!?!?! vvvvv
         // placeholderBox.style.top = '27.5px';    // based on <figure> element's top margin in styles.css JANUARY 2018 !!! THIS SIZE WORKS FOR 0-442PX SCREENWIDTH ONLY
-        
+
         if (screenWidth < 442) {
             placeholderBox.style.top = '27.5px';    // based on <figure> element's top margin in styles.css JANUARY 2018 !!! THIS SIZE WORKS FOR 0-442PX SCREENWIDTH ONLY
         } else {
@@ -331,34 +331,34 @@ function slideshow() {
 
         // if (firstCaption.hasAttribute('data-galleryfigcaption')) {
             // if there is a caption, set this as the placeholder box's height (just the height of the <figure> element)
-            // placeholderBox.style.height = 'calc(10px + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';    
+            // placeholderBox.style.height = 'calc(10px + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';
         // } else {
-            // placeholderBox.style.height = 'calc(32.5px + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';   
+            // placeholderBox.style.height = 'calc(32.5px + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';
         // }
 
         if (screenWidth < 442) {
 
             if (firstCaption.hasAttribute('data-galleryfigcaption')) {
-                placeholderBox.style.height = 'calc(10px + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';    
+                placeholderBox.style.height = 'calc(10px + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';
             } else {
-                placeholderBox.style.height = 'calc(32.5px + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';   
+                placeholderBox.style.height = 'calc(32.5px + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';
             }
 
         } else {
             if (screenWidth < 650) {
 
                 if (firstCaption.hasAttribute('data-galleryfigcaption')) {
-                    placeholderBox.style.height = 'calc(2.26vw + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';    
+                    placeholderBox.style.height = 'calc(2.26vw + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';
                 } else {
-                    placeholderBox.style.height = 'calc(7.345vw + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';   
+                    placeholderBox.style.height = 'calc(7.345vw + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';
                 }
 
             } else {
 
                 if (firstCaption.hasAttribute('data-galleryfigcaption')) {
-                    placeholderBox.style.height = 'calc(14.69px + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';    
+                    placeholderBox.style.height = 'calc(14.69px + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';
                 } else {
-                    placeholderBox.style.height = 'calc(47.743px + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';   
+                    placeholderBox.style.height = 'calc(47.743px + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';
                 }
 
             }
@@ -402,14 +402,14 @@ function slideshow() {
 
             // position <figure> element vertically (relative) within <li> element, so it can be even with top of first slide
             slide[j].firstElementChild.style.position = "relative";    // styling <figure> to be relatively positioned within <li> which is absolutely positioned
-            
+
             // set first slide up as "current slide"
             slide[0].removeAttribute('data-sideslide');
             slide[0].firstElementChild.style.top = '0';
             slide[0].setAttribute('id', galleryName + '-current');
             // making current img clickable to open lightbox (in a different function), by adding "clickme" class
             slide[0].firstElementChild.firstElementChild.setAttribute('class', 'contentimage clickme');
-            
+
             // make first slide's caption NOT have a white left edge (so it won't cover home glasses)
             // but subsequent slides need the white left edge as a border with previous image behind, so this only applies to first image
             if (slide[0].firstElementChild.lastElementChild.hasAttribute('data-galleryfigcaption')) {
@@ -488,7 +488,7 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
             dotsList[k].innerHTML = '<img src="https://liaprins.com/assets/images/dot.svg" alt="go to this slide" class="dotimg dotimgunfilled">';
         } // close if
     } // close k
-    
+
     var arrowContainer = gallery.lastElementChild.previousElementSibling.previousElementSibling;
     var placeholderBox = gallery.lastElementChild.previousElementSibling;
     var screenWidth = window.innerWidth;
@@ -542,9 +542,9 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
     // if the selected slide has a caption & the screen is less than 1225px wide
     // if ((clickedSlideCaption.hasAttribute('data-galleryfigcaption')) && (screenWidth < 1225)) {
     // if (clickedSlideCaption.hasAttribute('data-galleryfigcaption')) {
-        // placeholderBox.style.height = 'calc(10px + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
+        // placeholderBox.style.height = 'calc(10px + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';
     // } else {
-        // placeholderBox.style.height = 'calc(32.5px + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
+        // placeholderBox.style.height = 'calc(32.5px + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';
     // }
 
 
@@ -552,27 +552,27 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
     if (screenWidth < 442) {
 
         if (clickedSlideCaption.hasAttribute('data-galleryfigcaption')) {
-            placeholderBox.style.height = 'calc(10px + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
+            placeholderBox.style.height = 'calc(10px + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';
         } else {
-            placeholderBox.style.height = 'calc(32.5px + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
+            placeholderBox.style.height = 'calc(32.5px + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';
         }
 
     } else {
         if (screenWidth < 650) {
 
             if (clickedSlideCaption.hasAttribute('data-galleryfigcaption')) {
-                placeholderBox.style.height = 'calc(2.26vw + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
+                placeholderBox.style.height = 'calc(2.26vw + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';
             } else {
-                placeholderBox.style.height = 'calc(7.345vw + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
+                placeholderBox.style.height = 'calc(7.345vw + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';
             }
 
         } else {
 
             if (clickedSlideCaption.hasAttribute('data-galleryfigcaption')) {
-                placeholderBox.style.height = 'calc(14.69px + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
+                placeholderBox.style.height = 'calc(14.69px + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';
             } else {
-                // placeholderBox.style.height = 'calc(47.743px + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
-                placeholderBox.style.height = 'calc(47.743px + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
+                // placeholderBox.style.height = 'calc(47.743px + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';
+                placeholderBox.style.height = 'calc(47.743px + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';
             }
 
         }
@@ -581,8 +581,8 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
 
 
     // the height of placeholderBox has to be moved to render AFTER the caption is made visible in the DOM, otherwise the caption will come in at 0px high since it will still be hidden!
-    // placeholderBox.style.height = 'calc(2.048rem + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
-    // placeholderBox.style.height = 'calc(' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
+    // placeholderBox.style.height = 'calc(2.048rem + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';
+    // placeholderBox.style.height = 'calc(' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';
 
     // position dots container so it is between caption and img (for less than 1225, but still works perfectly for 1225+ also!)
     // dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - clickedSideSlide.firstElementChild.firstElementChild.offsetHeight) + 'px + 23px)';
@@ -624,7 +624,7 @@ function clickGalleryArrow(e) {
 
         // get total number of slides in gallery; subtract 3 to prevent counting arrowContainer, dotsContainer, and placeholderBox
         var slideCount = gallery.children.length - 3;
-        
+
         if (clickedThing.hasAttribute('data-advancearrow')) {
 
             // if current slide is not the last slide
@@ -694,7 +694,7 @@ window.onload = function() {
 
         // REG VIEW LEFT SWIPE
         if ((swipedThing.getAttribute('id') == ('galleryimage')) && (swipedThing.classList.contains('clickme'))) {
-            
+
             var dotsContainer = swipedThing.parentNode.parentNode.parentNode.lastElementChild;
             var gallery = swipedThing.parentNode.parentNode.parentNode;
             var galleryName = gallery.getAttribute('id');
@@ -735,9 +735,9 @@ window.onload = function() {
             var gallery = swipedThing.parentNode.parentNode.parentNode.parentNode;
             var dotsContainer = gallery.lastElementChild;
             var currentSlide = document.getElementById(galleryName + '-current');
-        
+
             var currentCaptionDuringLightbox = currentSlide.firstElementChild.lastElementChild.previousElementSibling;
-        
+
             // find the current slide's index
             var currentIndex = currentSlide.getAttribute('data-slide-index');
 
@@ -768,9 +768,9 @@ window.onload = function() {
                 // remove current lightbox
                 currentLightbox.parentNode.removeChild(currentLightbox);
                 // call NAMED lightbox function
-                lightbox(imgToShow);  
+                lightbox(imgToShow);
                 // call NAMED function to populate lightbox dots (defined in lightbox.js)
-                populateLightboxDots(imgToShow); 
+                populateLightboxDots(imgToShow);
 
             } else {    // implied that advance arrow was clicked when last slide was current
 
@@ -783,9 +783,9 @@ window.onload = function() {
                 // remove current lightbox
                 currentLightbox.parentNode.removeChild(currentLightbox);
                 // call NAMED lightbox function
-                lightbox(imgToShow);  
+                lightbox(imgToShow);
                 // call NAMED function to populate lightbox dots (defined in lightbox.js)
-                populateLightboxDots(imgToShow); 
+                populateLightboxDots(imgToShow);
 
             } // closing inner if/else statement
 
@@ -804,7 +804,7 @@ window.onload = function() {
 
         // REG VIEW RIGHT SWIPE
         if ((e.target.getAttribute('id') == ('galleryimage')) && (e.target.classList.contains('clickme'))) {
-            
+
             var dotsContainer = swipedThing.parentNode.parentNode.parentNode.lastElementChild;
             var gallery = swipedThing.parentNode.parentNode.parentNode;
             var galleryName = gallery.getAttribute('id');
@@ -841,9 +841,9 @@ window.onload = function() {
             var gallery = swipedThing.parentNode.parentNode.parentNode.parentNode;
             var dotsContainer = gallery.lastElementChild;
             var currentSlide = document.getElementById(galleryName + '-current');
-        
+
             var currentCaptionDuringLightbox = currentSlide.firstElementChild.lastElementChild.previousElementSibling;
-        
+
             // find the current slide's index
             var currentIndex = currentSlide.getAttribute('data-slide-index');
 
@@ -873,9 +873,9 @@ window.onload = function() {
                 // remove current lightbox
                 currentLightbox.parentNode.removeChild(currentLightbox);
                 // call NAMED lightbox function
-                lightbox(imgToShow);  
+                lightbox(imgToShow);
                 // call NAMED function to populate lightbox dots (defined in lightbox.js)
-                populateLightboxDots(imgToShow); 
+                populateLightboxDots(imgToShow);
 
             } else {    // implied that retreat arrow was clicked when first slide was current
 
@@ -888,9 +888,9 @@ window.onload = function() {
                 // remove current lightbox
                 currentLightbox.parentNode.removeChild(currentLightbox);
                 // call NAMED lightbox function
-                lightbox(imgToShow);  
+                lightbox(imgToShow);
                 // call NAMED function to populate lightbox dots (defined in lightbox.js)
-                populateLightboxDots(imgToShow); 
+                populateLightboxDots(imgToShow);
 
             } // closing inner if/else statement
 
@@ -904,7 +904,7 @@ window.onload = function() {
 
 // USED FUNCTION ----------------------------------------------------------------------------
 // for clicking on sideslides in regular view
-function selectOtherSlide(e) {  
+function selectOtherSlide(e) {
 
     var clickedThing = e.target;
     var clickedThingGrandparent = clickedThing.parentNode.parentNode;    // <li> element, if clickedThing was a side slide's <img>
@@ -953,7 +953,7 @@ function clickDot(e) {
         var clickedIndex = clickedDot.getAttribute('data-dot-index');
         var galleryName = gallery.getAttribute('id');
         var currentSlide = document.getElementById(galleryName + '-current');
-        
+
         // for loop to be able to define clickedSideSlide, based on currentDotIndex
         for (l = 0; l < dotsContainer.children.length; l++) {
 
@@ -962,7 +962,7 @@ function clickDot(e) {
                 var clickedSideSlide = gallery.children[l];
 
                 // calling NAMED FUNCTION
-                advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);        
+                advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
 
             }  // close if
         }  // close l
@@ -1001,9 +1001,9 @@ function lightboxDots(e) {
         var clickedIndex = clickedLightboxDot.getAttribute('data-dot-index');
         var currentSlide = document.getElementById(galleryName + '-current');
 
-        
+
         var currentCaptionDuringLightbox = currentSlide.firstElementChild.lastElementChild.previousElementSibling;
-        
+
         // find the current slide's index
         var currentIndex = currentSlide.getAttribute('data-slide-index');
 
@@ -1015,21 +1015,21 @@ function lightboxDots(e) {
 
         // for loop to be able to define clickedSideSlide, based on currentDotIndex
         for (l = 0; l < dotsContainer.children.length; l++) {
-            
+
             // find slide with matching index to current dot
             if (clickedIndex == gallery.children[l].getAttribute('data-slide-index')) {
-                
+
                 var clickedSideSlide = gallery.children[l];
 
                 // calling NAMED FUNCTION
-                advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);        
+                advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
 
             }  // close if
         }  // close l
 
         // all functionality for building lightbox upon lightbox dot click
         var dotsLightboxContainer = clickedThingGrandparent;
-        
+
         // for loop to be able to define imgToShow, based on clickedLightboxDot
         for (m = 0; m < dotsLightboxContainer.children.length; m++) {
 
@@ -1042,10 +1042,10 @@ function lightboxDots(e) {
                 currentLightbox.parentNode.removeChild(currentLightbox);
 
                 // call NAMED lightbox function
-                lightbox(imgToShow);  
+                lightbox(imgToShow);
 
                 // call NAMED function to populate lightbox dots (defined in lightbox.js)
-                populateLightboxDots(imgToShow);               
+                populateLightboxDots(imgToShow);
 
             }  // close if
         }  // close m
@@ -1076,9 +1076,9 @@ function lightboxArrows(e) {
         var gallery = document.getElementById(galleryName);
         var dotsContainer = gallery.lastElementChild;
         var currentSlide = document.getElementById(galleryName + '-current');
-        
+
         var currentCaptionDuringLightbox = currentSlide.firstElementChild.lastElementChild.previousElementSibling;
-        
+
         // find the current slide's index
         var currentIndex = currentSlide.getAttribute('data-slide-index');
 
@@ -1112,9 +1112,9 @@ function lightboxArrows(e) {
                 // remove current lightbox
                 currentLightbox.parentNode.removeChild(currentLightbox);
                 // call NAMED lightbox function
-                lightbox(imgToShow);  
+                lightbox(imgToShow);
                 // call NAMED function to populate lightbox dots (defined in lightbox.js)
-                populateLightboxDots(imgToShow); 
+                populateLightboxDots(imgToShow);
 
             } else {    // implied that advance arrow was clicked when last slide was current
 
@@ -1128,9 +1128,9 @@ function lightboxArrows(e) {
                 // remove current lightbox
                 currentLightbox.parentNode.removeChild(currentLightbox);
                 // call NAMED lightbox function
-                lightbox(imgToShow);  
+                lightbox(imgToShow);
                 // call NAMED function to populate lightbox dots (defined in lightbox.js)
-                populateLightboxDots(imgToShow); 
+                populateLightboxDots(imgToShow);
 
             } // closing inner if/else statement
 
@@ -1149,9 +1149,9 @@ function lightboxArrows(e) {
                 // remove current lightbox
                 currentLightbox.parentNode.removeChild(currentLightbox);
                 // call NAMED lightbox function
-                lightbox(imgToShow);  
+                lightbox(imgToShow);
                 // call NAMED function to populate lightbox dots (defined in lightbox.js)
-                populateLightboxDots(imgToShow); 
+                populateLightboxDots(imgToShow);
 
             } else {    // implied that retreat arrow was clicked when first slide was current
 
@@ -1165,9 +1165,9 @@ function lightboxArrows(e) {
                 // remove current lightbox
                 currentLightbox.parentNode.removeChild(currentLightbox);
                 // call NAMED lightbox function
-                lightbox(imgToShow);  
+                lightbox(imgToShow);
                 // call NAMED function to populate lightbox dots (defined in lightbox.js)
-                populateLightboxDots(imgToShow); 
+                populateLightboxDots(imgToShow);
 
             } // closing inner if/else statement
         } // closing semi-outer if/else statement
@@ -1189,11 +1189,29 @@ function verticallyCenter() {
     var singleLightbox = document.getElementById('singlelightbox');
     if (singleLightbox) {
         var lightboxImg = singleLightbox.firstElementChild;
-        var imgHeight = lightboxImg.offsetHeight;
         singleLightbox.style.height = (window.innerHeight);
         singleLightbox.style.width = window.innerWidth;
         var lightboxHeight = singleLightbox.offsetHeight;
-        lightboxImg.style.marginTop = (lightboxHeight - imgHeight)/2 + 'px';
+        // var imgHeight = lightboxImg.offsetHeight; // NOT NECESSARY UNLESS I CAN GET THE LINE BELOW TO WORK vvv
+        // lightboxImg.style.marginTop = (lightboxHeight - imgHeight)/2 + 'px'; // THIS WORKED ON KIRBY BUT WITH JEKYLL INSTANTIATION imgHeight (lightboxImg.offsetHeight) IS SOMEHOW NOT ABLE TO BE CAPTURED AT THIS POINT, SO I REBUILT THE FUNCTIONALITY BY PROJECTING EACH LIGHTBOX IMAGE'S HEIGHT AND WIDTH VIA THE IF-STATEMENTS BELOW
+
+        var imgToShow = singleLightbox.parentNode.firstElementChild;
+        var screenWidth = window.innerWidth; // get screen width
+        if (screenWidth >= 1240) {
+          if ((imgToShow.offsetWidth / imgToShow.offsetHeight) > (1240 / singleLightbox.offsetHeight)) {
+            var lightboxImgHeight = (imgToShow.offsetHeight * 1240) / imgToShow.offsetWidth;
+            lightboxImg.style.marginTop = (lightboxHeight - lightboxImgHeight)/2 + 'px';
+          } else {
+            lightboxImg.style.marginTop = '0';
+          }
+        } else {
+          if ((imgToShow.offsetWidth / imgToShow.offsetHeight) > (singleLightbox.offsetWidth / singleLightbox.offsetHeight)) {
+            var lightboxImgHeight = (imgToShow.offsetHeight * singleLightbox.offsetWidth) / imgToShow.offsetWidth;
+            lightboxImg.style.marginTop = (lightboxHeight - lightboxImgHeight)/2 + 'px';
+          } else {
+            lightboxImg.style.marginTop = '0';
+          }
+        }
     }
 }
 
@@ -1213,6 +1231,3 @@ function lightboxSlideshowResize() {
 
 // window.addEventListener('resize', lightboxSlideshowResize, false);
 window.addEventListener('orientationchange', lightboxSlideshowResize, false);
-
-
-
