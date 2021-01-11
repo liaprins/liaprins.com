@@ -40,7 +40,7 @@ function lightbox(imgToShow) {
     // !!! the src attributes (for "x" and "^" icons) vvv will have to update when I get proper hosting and URL set up!
     // !!! or store the PHP version in an HTML element's attribute, then collect it in JS as a variable and call it here
     // !!! or else construct its shape with CSS (research performance) vvv
-    singleLightbox.innerHTML = singleLightbox.parentNode.innerHTML + '<img src="https://liaprins.com/assets/images/x.svg" alt="close" id="lightboxclose" class="close-x yellowhover" data-lightbox-x>';
+    singleLightbox.innerHTML = singleLightbox.parentNode.innerHTML + '<img src="https://liaprins.com/assets/images/sitewide/x.svg" alt="close" id="lightboxclose" class="close-x yellowhover" data-lightbox-x>';
 
     // remove unintentionally duplicated lightbox element from original
     // (duplicated when call the HTML of <figure> element it is attached to was duplicated as lightbox's content)
@@ -83,7 +83,7 @@ function lightbox(imgToShow) {
         // !!! or store the PHP version in an HTML element's attribute, then collect it in JS as a variable and call it here
         // !!! or else construct its shape with CSS (research performance) vvv
         // toggle.setAttribute('src', 'http://localhost:8888/kirby-project/portfolio/assets/images/up-arrowhead.svg');
-        toggle.setAttribute('src', 'https://liaprins.com/assets/images/up-arrowhead.svg');
+        toggle.setAttribute('src', 'https://liaprins.com/assets/images/sitewide/up-arrowhead.svg');
         toggle.setAttribute('title', 'Toggle caption visibility');
         toggle.setAttribute('alt', 'Toggle caption visibility');
         toggle.setAttribute('id', 'captiontoggle');
@@ -124,7 +124,7 @@ function populateLightboxDots(imgToShow) {
         lightboxAgain.appendChild(lightboxArrowContainer);
         lightboxArrowContainer.setAttribute('class', 'arrowcontainer lightboxarrowcontainer');
         // lightboxArrowContainer.style.position = 'relative';
-        lightboxArrowContainer.innerHTML = '<img src="https://liaprins.com/assets/images/left-arrowhead.svg" alt="retreat" title="Previous image" class="galleryarrows lightboxarrows yellowhover" data-retreatlightboxarrow>' + '<img src="https://liaprins.com/assets/images/right-arrowhead.svg" alt="advance" title="Next image" class="galleryarrows lightboxarrows yellowhover" data-advancelightboxarrow>';
+        lightboxArrowContainer.innerHTML = '<img src="https://liaprins.com/assets/images/sitewide/left-arrowhead.svg" alt="retreat" title="Previous image" class="galleryarrows lightboxarrows yellowhover" data-retreatlightboxarrow>' + '<img src="https://liaprins.com/assets/images/sitewide/right-arrowhead.svg" alt="advance" title="Next image" class="galleryarrows lightboxarrows yellowhover" data-advancelightboxarrow>';
 
     } // close gallery-if
 } // close function
@@ -291,7 +291,7 @@ function slideshow() {
         galleryList[i].appendChild(arrowContainer);
         arrowContainer.setAttribute('class', 'arrowcontainer');
         arrowContainer.style.position = 'relative';
-        arrowContainer.innerHTML = '<img src="https://liaprins.com/assets/images/left-arrowhead.svg" alt="retreat" title="Previous image" class="galleryarrows yellowhover" data-retreatarrow>' + '<img src="https://liaprins.com/assets/images/right-arrowhead.svg" alt="advance" title="Next image" class="galleryarrows yellowhover" data-advancearrow>';
+        arrowContainer.innerHTML = '<img src="https://liaprins.com/assets/images/sitewide/left-arrowhead.svg" alt="retreat" title="Previous image" class="galleryarrows yellowhover" data-retreatarrow>' + '<img src="https://liaprins.com/assets/images/sitewide/right-arrowhead.svg" alt="advance" title="Next image" class="galleryarrows yellowhover" data-advancearrow>';
 
         // establish placeholder box to keep text after img at proper height
         var placeholderBox = document.createElement('div');
@@ -373,7 +373,7 @@ function slideshow() {
             // create dots + put dots into dots container
             var dot = document.createElement('span');
             dot.setAttribute('class', 'dot dotunfilled');
-            dot.innerHTML = '<img src="https://liaprins.com/assets/images/dot.svg" alt="go to this slide" class="dotimg dotimgunfilled">';
+            dot.innerHTML = '<img src="https://liaprins.com/assets/images/sitewide/dot.svg" alt="go to this slide" class="dotimg dotimgunfilled">';
             dotsContainer.appendChild(dot);
             dotsList = dotsContainer.children;
             dotsList[j].setAttribute('data-dot-index', (j));
@@ -382,7 +382,7 @@ function slideshow() {
             dotsList[j].setAttribute('data-galleryname', galleryName);
             // then override the first dot, to indicate it is the current dot/slide
             dotsList[0].setAttribute('class', 'dot');
-            dotsList[0].innerHTML = '<img src="https://liaprins.com/assets/images/dot-filled.svg" alt="go to this slide" class="dotimg dotimgfill">';
+            dotsList[0].innerHTML = '<img src="https://liaprins.com/assets/images/sitewide/dot-filled.svg" alt="go to this slide" class="dotimg dotimgfill">';
 
             // position all slides' <li> elements horizontally (absolute) + add data-* attribute to recognize them as side slides if clicked on
             var slide = galleryList[i].children;
@@ -482,10 +482,10 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
     for (k = 0; k < dotsList.length; k++) {
         if (k == clickedIndex) {
             dotsList[k].setAttribute('class', 'dot');
-            dotsList[k].innerHTML = '<img src="https://liaprins.com/assets/images/dot-filled.svg" alt="go to this slide" class="dotimg dotimgfill">';
+            dotsList[k].innerHTML = '<img src="https://liaprins.com/assets/images/sitewide/dot-filled.svg" alt="go to this slide" class="dotimg dotimgfill">';
         } else {
             dotsList[k].setAttribute('class', 'dot dotunfilled');
-            dotsList[k].innerHTML = '<img src="https://liaprins.com/assets/images/dot.svg" alt="go to this slide" class="dotimg dotimgunfilled">';
+            dotsList[k].innerHTML = '<img src="https://liaprins.com/assets/images/sitewide/dot.svg" alt="go to this slide" class="dotimg dotimgunfilled">';
         } // close if
     } // close k
 
@@ -969,7 +969,7 @@ function clickDot(e) {
 
         // set newly clicked dot to filled
         clickedDot.setAttribute('class', 'dot')
-        // clickedDot.innerHTML = '<img src="https://liaprins.com/assets/images/dot-filled.svg" alt="go to this slide" class="dotimg">';
+        // clickedDot.innerHTML = '<img src="https://liaprins.com/assets/images/sitewide/dot-filled.svg" alt="go to this slide" class="dotimg">';
     }  // close if
 } // close function
 
