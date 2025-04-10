@@ -162,7 +162,7 @@
         margin: 0 4.407px -4.407px 4.407px;    }
 
     #resume {
-        margin-left: 4.407px;    }
+        /* margin-left: 4.407px; */    }
 
     #abouttoggle {
         height: 40.4px;
