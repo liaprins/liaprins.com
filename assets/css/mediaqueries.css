@@ -147,9 +147,11 @@
 
     #mobilepic {
         margin-bottom: 29.38px;
-        height: calc(26.19vw - 4.42px);
+        /* height: calc(26.19vw - 4.42px); */
+        height: 52.067vw;
         width: 78.571vw;
-        background-size: 78.571vw calc(26.19vw - 4.42px);
+        /* background-size: 78.571vw calc(26.19vw - 4.42px); */
+        background-size: contain;
         background-image: url('../images/sitewide/lia-2.jpg');    }    /* match width/height of project tile image */
 
     #email,
