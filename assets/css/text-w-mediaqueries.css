@@ -60,7 +60,8 @@ h6 .smaller,
 .pullquote,
 #intro,
 #aboutoverview,
-#aboutcurrent {
+#aboutcurrent,
+#aboutpersonal {
     font-size: 15.504px !important;    }
 
 .pullquote,
@@ -248,7 +249,8 @@ sup {
     .pullquote,
     #intro,
     #aboutoverview,
-    #aboutcurrent {
+    #aboutcurrent,
+    #aboutpersonal {
         font-size: 3.508vw !important;    }
 
     .pullquote,
@@ -391,7 +393,8 @@ sup {
     .pullquote,
     #intro,
     #aboutoverview,
-    #aboutcurrent {
+    #aboutcurrent,
+    #aboutpersonal {
         font-size: 22.8px !important;    }
 
     .pullquote,
